@@ -14,3 +14,7 @@ function initialise() {
         }
     }
 };
+
+window.onload = function() {
+    initialise();
+};
