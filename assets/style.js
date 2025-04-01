@@ -12,10 +12,14 @@ function initialise() {
             tile.maxLength = '1'
             tile.classList.add('tile');
             grid.appendChild(tile);
-            
         }
     }
 };
+
+$(#submitBtn).on('click', function){
+    onsubmit()
+};
+
 
 window.onload = function() {
     initialise();
