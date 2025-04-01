@@ -16,9 +16,21 @@ function initialise() {
     }
 };
 
-$(#submitBtn).on('click', function){
-    onsubmit()
+$(#submitBtn).on('click', function) {
+    onSubmit()
 };
+
+function onSubmit(){
+    let tiles = document.querySelectorAll('.tile'); 
+    let userInput = '';
+
+    for (let i = 0; i < tiles.length; i++) {
+        userInput += tiles[i].ariaValue.toUpperCase();
+    }
+
+};
+
+
 
 
 window.onload = function() {
