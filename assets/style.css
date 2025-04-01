@@ -1,14 +1,20 @@
 body { 
-background-color: white;
+background-color: #f2e8de;
 text-align: center;
+color: #221639;
 }
+
+h2 {
+    font-size: medium;
+}
+
 #grid {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     height: 350px;
     width: 270px;
-    background-color: grey;
+    background-color: ;
     margin: auto;
 }
 
@@ -17,7 +23,15 @@ text-align: center;
     height: 50px; 
     display: flex;
     justify-self: center;
-    border: 1px solid black; 
+    border: 1px solid #edb855; 
     margin: 2px; 
-    background-color: white;
+    background-color: #edb855;
+    text-transform: uppercase;
+    text-align: center;
+    color: #221639;
+}
+
+#submitBtn {
+    background-color: #bd8576;
+    color: #f2e8de;
 }
