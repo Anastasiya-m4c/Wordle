@@ -16,7 +16,7 @@ function initialise() {
     }
 };
 
-$(#submitBtn).on('click', function) {
+$('#submitBtn').on('click', function()) {
     onSubmit()
 };
 
@@ -25,7 +25,7 @@ function onSubmit(){
     let userInput = '';
 
     for (let i = 0; i < tiles.length; i++) {
-        userInput += tiles[i].ariaValue.toUpperCase();
+        userInput += tiles[i].value.toUpperCase();
     }
 
 };
