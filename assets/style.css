@@ -1,5 +1,5 @@
 body { 
-background-color: whitesmoke;
+background-color: white;
 text-align: center;
 }
 #grid {
@@ -8,7 +8,7 @@ text-align: center;
     flex-wrap: wrap;
     height: 350px;
     width: 270px;
-    background-color: whitesmoke;
+    background-color: grey;
     margin: auto;
 }
 
