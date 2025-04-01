@@ -16,16 +16,22 @@ function initialise() {
     }
 };
 
-$('#submitBtn').on('click', function()) {
+$('#submitBtn').on('click', function (){
     onSubmit()
-};
+});
 
 function onSubmit(){
     let tiles = document.querySelectorAll('.tile'); 
     let userInput = '';
-
     for (let i = 0; i < tiles.length; i++) {
         userInput += tiles[i].value.toUpperCase();
+    }
+
+    if (userInput === secretWord){
+        alert('Congratulations you are right! Todays word is'`${secretWord}`)
+    }
+    if (userInput !=== 5){
+        alert('Please enter a 5 letter word!')
     }
 
 };
