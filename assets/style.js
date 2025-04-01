@@ -30,7 +30,7 @@ function onSubmit(){
     if (userInput === secretWord){
         alert('Congratulations you are right! Todays word is'`${secretWord}`)
     }
-    if (userInput !=== 5){
+    if (userInput !== 5){
         alert('Please enter a 5 letter word!')
     }
 
