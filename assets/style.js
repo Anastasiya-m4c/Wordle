@@ -8,7 +8,7 @@ function initialise() {
     for (let r=0; r < height; r++) {
         for (let c = 0; c < width; c ++) {
             let tile = document.createElement('input'); 
-            tyle.type = 'text';
+            tile.type = 'text';
             tile.maxLength = '1'
             tile.classList.add('tile');
             grid.appendChild(tile);
