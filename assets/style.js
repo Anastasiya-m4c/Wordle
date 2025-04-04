@@ -59,6 +59,7 @@ function inpuRules() {
     document.body.onkeyup = (e) => {
         const key = e.key;
         if (key === 'Enter'){
+            
             if ()
 
         }
