@@ -3,6 +3,9 @@ let secretWord = "TRAIN";
 var height = 6; 
 var width = 5;
 
+var row = 0; 
+var col = 0; 
+
 window.onload = function() {
     initialise();
 };
@@ -15,6 +18,7 @@ function initialise() {
             tile.type = 'text';
             tile.maxLength = '1'
             tile.classList.add('tile');
+            tile.id = `tile${row}${col}`
             grid.appendChild(tile);
         }
     }
@@ -27,24 +31,42 @@ $('#submitBtn').on('click', function (){
 function onSubmit(){
     let tiles = document.querySelectorAll('.tile'); 
     let userInput = '';
-    for (let i = 0; i < tiles.length; i++) {
+    for (let i = 0; i < 5; i++) {
         userInput += tiles[i].value.toUpperCase();
     }
     if (userInput === secretWord){
         alert(`Congratulations you are right! Todays word is ${secretWord}`)
     }
-    console.log(userInput)
+    highlight(userInput);
 
 };
 
-function highlight() {
+function highlight(userInput) {
+    let tiles = document.querySelectorAll('.tile');
     for (let i = 0; i < 5; i++) {
-        if(userInput === secretWord[i]) {
+        let tile = tiles[i];
+        if(userInput[i] === secretWord[i]) {
             tile.classList.add('green');
-        }else if(secretWord.includes(userInput)){
+        }else if(secretWord.includes(userInput[i])){
             tile.classList.add('yellow');
         }else {
-            tile.classList.add('grey')
+            tile.classList.add('gray')
         }
     }
 };    
+
+function inpuRules() {
+    document.body.onkeyup = (e) => {
+        const key = e.key;
+        if (key === 'Enter'){
+            if ()
+
+        }
+        if (key === 'Backspace'){
+
+        }
+        if (isLetter(key)){
+
+        }
+    }
+}
