@@ -26,14 +26,10 @@ function onSubmit(){
     for (let i = 0; i < tiles.length; i++) {
         userInput += tiles[i].value.toUpperCase();
     }
-
     if (userInput === secretWord){
         alert(`Congratulations you are right! Todays word is ${secretWord}`)
     }
-    if (userInput !== width){
-        alert('Please enter a 5 letter word!')
-    }
-
+    console.log(userInput)
 };
 
 
