@@ -18,7 +18,7 @@ function initialise() {
             tile.type = 'text';
             tile.maxLength = '1'
             tile.classList.add('tile');
-            tile.id = `tile${row}${col}`
+            tile.id = `tile${r}${col}`
             grid.appendChild(tile);
         }
     }
@@ -38,6 +38,8 @@ function onSubmit(){
         alert(`Congratulations you are right! Todays word is ${secretWord}`)
     }
     highlight(userInput);
+    row ++; 
+    col = 0; 
 
 };
 
@@ -55,19 +57,28 @@ function highlight(userInput) {
     }
 };    
 
-function inpuRules() {
+function inputRules() {
     document.body.onkeyup = (e) => {
         const key = e.key;
         if (key === 'Enter'){
-            
-            if ()
-
+            onSubmit()
+            }
         }
         if (key === 'Backspace'){
-
+            removeLetter();
         }
         if (isLetter(key)){
-
+            addLetter(key);
         }
-    }
+    };
+
+function removeLetter() {
+
+}   
+
+function addLetter(){
+    if ()
+}
+function isLetter(){
+    return key.lenghth === 1 && key.match(/[a-z/i]);
 }
