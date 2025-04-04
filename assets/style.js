@@ -18,7 +18,7 @@ function initialise() {
             tile.type = 'text';
             tile.maxLength = '1'
             tile.classList.add('tile');
-            tile.id = `tile${r}${col}`
+            tile.id = `tile${r}${c}`
             grid.appendChild(tile);
         }
     }
@@ -77,8 +77,10 @@ function removeLetter() {
 }   
 
 function addLetter(){
-    if ()
+    if (col < width) {
+        col++;
+    }
 }
-function isLetter(){
+function isLetter(key){
     return key.lenghth === 1 && key.match(/[a-z/i]);
 }
