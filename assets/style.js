@@ -57,30 +57,3 @@ function highlight(userInput) {
     }
 };    
 
-function inputRules() {
-    document.body.onkeyup = (e) => {
-        const key = e.key;
-        if (key === 'Enter'){
-            onSubmit()
-            }
-        }
-        if (key === 'Backspace'){
-            removeLetter();
-        }
-        if (isLetter(key)){
-            addLetter(key);
-        }
-    };
-
-function removeLetter() {
-
-}   
-
-function addLetter(){
-    if (col < width) {
-        col++;
-    }
-}
-function isLetter(key){
-    return key.lenghth === 1 && key.match(/[a-z/i]);
-}
