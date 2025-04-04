@@ -32,7 +32,16 @@ function onSubmit(){
     console.log(userInput)
 };
 
-
+function highlight() {
+    for (let i = 0; i < 5; i++) {
+        if(userInput === secretWord[i]) {
+            tile.classList.add('green');
+        }else if(secretWord.includes(userInput)){
+            tile.classList.add('yellow');
+        }else {
+            tile.classList.add('grey')
+        }
+}
 
 window.onload = function() {
     initialise();
