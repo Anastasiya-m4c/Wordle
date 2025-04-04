@@ -3,6 +3,10 @@ let secretWord = "TRAIN";
 var height = 6; 
 var width = 5;
 
+window.onload = function() {
+    initialise();
+};
+
 function initialise() {
     let grid = document.getElementById('grid');
     for (let r=0; r < height; r++) {
@@ -30,6 +34,7 @@ function onSubmit(){
         alert(`Congratulations you are right! Todays word is ${secretWord}`)
     }
     console.log(userInput)
+
 };
 
 function highlight() {
@@ -41,8 +46,5 @@ function highlight() {
         }else {
             tile.classList.add('grey')
         }
-}
-
-window.onload = function() {
-    initialise();
-};
+    }
+};    

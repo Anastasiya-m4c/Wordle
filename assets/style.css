@@ -35,3 +35,18 @@ h2 {
     background-color: #bd8576;
     color: #f2e8de;
 }
+
+.green {
+    background-color: green;
+    border: green;
+}
+
+.gray {
+    background-color: gray;
+    border: gray;
+}
+
+.yellow {
+    background-color: yellow;
+    border: yellow;
+}
