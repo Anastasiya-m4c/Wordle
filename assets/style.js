@@ -85,9 +85,11 @@ function removeLetter() {
 
 function addLetter(){
     if (col < width) {
+        let tile = document.getElementById(`tile${row}${col}`);
+        tile.value = letter;
         col++;
     }
 }
 function isLetter(key){
-    return key.lenghth === 1 && key.match(/[a-z/i]);
+    return key.lenghth === 1 && key.match(/[a-zA-Z/i]);
 }
