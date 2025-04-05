@@ -6,6 +6,10 @@ var width = 5;
 var row = 0; 
 var col = 0; 
 
+let guessLeft = height; 
+let currentGuess = [];
+let nextLetter = 0; 
+
 window.onload = function() {
     initialise();
 };
@@ -40,6 +44,7 @@ function onSubmit(){
     highlight(userInput);
     row ++; 
     col = 0; 
+    guessLeft--;
 
 };
 
@@ -55,5 +60,33 @@ function highlight(userInput) {
             tile.classList.add('gray')
         }
     }
+    row ++; 
 };    
 
+function inputRules() {
+    document.body.onkeyup = (e) => {
+        const key = e.key;
+        if (key === 'Enter'){
+            onSubmit()
+            }
+        }
+        if (key === 'Backspace'){
+            removeLetter();
+        }
+        if (isLetter(key)){
+            addLetter(key);
+        }
+    };
+
+function removeLetter() {
+
+}   
+
+function addLetter(){
+    if (col < width) {
+        col++;
+    }
+}
+function isLetter(key){
+    return key.lenghth === 1 && key.match(/[a-z/i]);
+}
