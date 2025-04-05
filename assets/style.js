@@ -73,7 +73,8 @@ function inputRules() {
         }else if (isLetter(key)){
             addLetter(key);
         }
-    };
+    }
+};
 
 function removeLetter() {
     if (col > 0)
@@ -90,5 +91,5 @@ function addLetter(){
     }
 }
 function isLetter(key){
-    return key.length === 1 && key.match(/[a-zA-Z/i]);
-}
+    return key.length === 1 && key.match(/[a-zA-Z]/i);
+};
