@@ -65,11 +65,10 @@ function highlight(userInput) {
 
 function inputRules() {
     document.body.onkeyup = (e) => {
-        const key = e.key.toLocaleUpperCase();
+        const key = e.key.toUpperCase();
         if (key === 'Enter'){
-            onSubmit()
-            }
-        }else if (key === 'Backspace'){
+            onSubmit();
+        } else if (key === 'Backspace') {
             removeLetter();
         }else if (isLetter(key)){
             addLetter(key);
@@ -91,5 +90,5 @@ function addLetter(){
     }
 }
 function isLetter(key){
-    return key.lenghth === 1 && key.match(/[a-zA-Z/i]);
+    return key.length === 1 && key.match(/[a-zA-Z/i]);
 }
