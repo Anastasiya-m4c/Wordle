@@ -77,7 +77,10 @@ function inputRules() {
     };
 
 function removeLetter() {
-    if 
+    if (col > 0)
+        col--;
+    let tile = document.getElementById(`tile${row}${col}`)
+    tile.value = '';
 }   
 
 function addLetter(){
