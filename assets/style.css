@@ -37,16 +37,16 @@ h2 {
 }
 
 .green {
-    background-color: #79ae91;
-    border: #79ae91;
+    background-color: #5c9475;
+    border: #37604a;
 }
 
 .gray {
-    background-color: #5a5a57;
-    border: #5a5a57;
+    background-color: grey;
+    border: rgb(63, 61, 61);
 }
 
 .yellow {
     background-color: #e6a937;
-    border: #e6a937;;
+    border: #815e1e;;
 }
