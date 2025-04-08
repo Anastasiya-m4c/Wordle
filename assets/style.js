@@ -12,6 +12,7 @@ let nextLetter = 0;
 
 window.onload = function() {
     initialise();
+    inputRules();
 };
 
 function initialise() {
