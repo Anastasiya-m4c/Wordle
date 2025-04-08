@@ -61,7 +61,7 @@ function onSubmit() {
 
 async function isValidWord(word) {
     try {
-        const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/<word>`);
+        const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${userInput.toLowerCase()}`);
         if (response.ok) {
             return true;
         } else {
@@ -95,24 +95,25 @@ function inputRules() {
         }else if (isLetter(key)){
             addLetter(key);
         }
-    }
+    };
 };
 
 function removeLetter() {
-    if (col > 0)
+    if (col > 0){
     col--;
-        let tile = document.getElementById(`tile${row}${col}`)
+        let tile = document.getElementById(`tile${row}${col}`);
     tile.value = '';
-    }   
+    }
+}   
 
-function addLetter(){
+function addLetter(letter) {
     if (col < width) {
         let tile = document.getElementById(`tile${row}${col}`);
         tile.value = letter;
         col++;
     }
-} 
-function isLetter(key){
+}
+
+function isLetter(key) {
     return key.length === 1 && key.match(/[a-zA-Z]/i);
-    col++;
 }; 
