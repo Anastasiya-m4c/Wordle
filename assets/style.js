@@ -33,26 +33,30 @@ $('#submitBtn').on('click', function (){
     onSubmit()
 });
 
-function onSubmit(){
+function onSubmit() {
     let tiles = document.querySelectorAll('.tile'); 
     let userInput = '';
     for (let i = 0; i < 5; i++) {
         userInput += tiles[i].value.toUpperCase();
     }
-    if (userInput === secretWord){
-        alert(`Congratulations you are right! Todays word is ${secretWord}`)
+
+    if (userInput === secretWord) {
+        alert(`Congratulations you are right! Todays word is ${secretWord}`);
     } else if (userInput.length < 5) {
         alert('Your guess must be 5 letters.')
-    } else { isValidWord(userInput).then(isValid => {
+    } else { 
+        isValidWord(userInput).then(isValid => {
         if (!isValid) { 
         alert(`${userInput} is not a valid word.`);
         } else {
     highlight(userInput);
-    row ++; 
-    col = 0; 
+    row++; 
+    col = 0;
     guessLeft--;
-    console.log(guessLeft); 
+    console.log(guessLeft);
         }
+    }); 
+    }   
 };
 
 async function isValidWord(word) {
