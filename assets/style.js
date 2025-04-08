@@ -43,15 +43,27 @@ function onSubmit(){
         alert(`Congratulations you are right! Todays word is ${secretWord}`)
     } else if (userInput.length < 5) {
         alert('Your guess must be 5 letters.')
-    } else if () {
-        alert(`${userInput} is not a valid word`)
-    }
-
+    } else { isValidWord(userInput).then(isValid => {
+        if (!isValid) { 
+        alert(`${userInput} is not a valid word.`);
+        } else {
     highlight(userInput);
     row ++; 
     col = 0; 
     guessLeft--;
-    console.log(guessLeft)
+    console.log(guessLeft); 
+        }
+};
+
+async function isValidWord(word) {
+    try {
+        const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/<word>`);
+        if (response.ok) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 };
 
 function highlight(userInput) {
