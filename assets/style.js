@@ -50,7 +50,7 @@ function onSubmit(){
     row ++; 
     col = 0; 
     guessLeft--;
-    colsole.log(guessLeft)
+    console.log(guessLeft)
 };
 
 function highlight(userInput) {
