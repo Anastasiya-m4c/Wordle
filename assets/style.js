@@ -22,7 +22,7 @@ function initialise() {
             tile.type = 'text';
             tile.maxLength = '1'
             tile.classList.add('tile');
-            tile.id = `tile${r}${c}`
+            //tile.id = `tile${r}${c}`
             grid.appendChild(tile);
         }
     }
@@ -40,12 +40,17 @@ function onSubmit(){
     }
     if (userInput === secretWord){
         alert(`Congratulations you are right! Todays word is ${secretWord}`)
+    } else if (userInput.length < 5) {
+        alert('Your guess must be 5 letters.')
+    } else if () {
+        alert(`${userInput} is not a valid word`)
     }
+
     highlight(userInput);
     row ++; 
     col = 0; 
     guessLeft--;
-
+    colsole.log(guessLeft)
 };
 
 function highlight(userInput) {
@@ -81,6 +86,7 @@ function removeLetter() {
         col--;
     let tile = document.getElementById(`tile${row}${col}`)
     tile.value = '';
+    col--:
 }   
 
 function addLetter(){
@@ -89,7 +95,8 @@ function addLetter(){
         tile.value = letter;
         col++;
     }
-}
+} 
 function isLetter(key){
     return key.length === 1 && key.match(/[a-zA-Z]/i);
-};
+    col++;
+}; 
