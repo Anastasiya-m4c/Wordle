@@ -22,7 +22,7 @@ function initialise() {
             tile.type = 'text';
             tile.maxLength = '1'
             tile.classList.add('tile');
-            //tile.id = `tile${r}${c}`
+            tile.id = `tile${r}${c}`
             grid.appendChild(tile);
         }
     }
@@ -83,11 +83,10 @@ function inputRules() {
 
 function removeLetter() {
     if (col > 0)
-        col--;
-    let tile = document.getElementById(`tile${row}${col}`)
+    col--;
+        let tile = document.getElementById(`tile${row}${col}`)
     tile.value = '';
-    col--:
-}   
+    }   
 
 function addLetter(){
     if (col < width) {
