@@ -149,6 +149,7 @@ function addLetter(letter) {
     if (col <width) {
         let tile = document.getElementById(`tile${row}${col}`);
         tile.value = letter;
+        tile.focus();
         col++;
     }
 };
