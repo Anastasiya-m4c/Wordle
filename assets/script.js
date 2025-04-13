@@ -1,20 +1,27 @@
+
+// The secret word that the user is trying to guess
 let secretWord = "TRAIN"; 
 
-var height = 6; 
-var width = 5;
+// Dimensions of the grid for the game
+var height = 6; // Number of rows
+var width = 5; // Number of columns
 
+// Initial positions for guesses
 var row = 0; 
 var col = 0; 
 
+// Number of guesses left and current guess storage
 let guessLeft = height; 
-let currentGuess = [];
-let nextLetter = 0; 
+//let currentGuess = [];
+//let nextLetter = 0; 
 
+// Runs when the window has finished loading
 window.onload = function() {
-    initialise();
-    inputRules();
+    initialise(); // Sets up the game grid
+    inputRules(); //Calls a function that sets input rules
 };
 
+// Function to create and display the input grid for the game
 function initialise() {
     let grid = document.getElementById('grid');
     for (let r = 0; r < height; r++) {
@@ -29,50 +36,50 @@ function initialise() {
     }
 };
 
+// Event listener for the submit button click
 $('#submitBtn').on('click', function () {
     onSubmit()
 });
 
+
+// Function to handle a guess submit
 async function onSubmit() {
-    //let userInput = '';
-    // Loop through each tile (input box) in the current row
-    //for (let t = 0; t < width; t++) {
-        // Get the tile by its ID, which includes the current row and column
-        //let tile = document.getElementById(`tile${row}${t}`);
-
-        // Add the letter from the tile to the guess, in uppercase
-        //userInput += tile.value.toUpperCase();
-        //console.log('userInputTEST: ', userInput)
-        //console.log('tile: ', tile)
-    //}
     
-    let tiles = document.querySelectorAll('.tile'); 
-    console.log('row', row)
-    let userInput = '';
+    let tiles = document.querySelectorAll('.tile'); // Get all tiles
+    console.log('row', row) // Log the current row number
+    let userInput = ''; // String to hold the user's guess
 
-    for (let i = row * 5; i < (i + 5); i++) {
-    //for (let i = 0; i < 5; i++) {
+     // Loop to collect the user's guess from the tiles
+    for (let i = 0; i < width; i++) {
+
     console.log('TILE: ', document.getElementById(`tile${row}`))
-    userInput += tiles[i].value.toUpperCase();
-    }
+
+    userInput += tiles[row * width + i].value.toUpperCase(); // Access each tile of the current row
+    } 
+
+    // Check if the user's guess matches the secret word
     if (userInput === secretWord) {
-        alert(`Congratulations you are right! Todays word is ${secretWord}`);
-    } else if (userInput.length < 5) {
-        alert('Your guess must be 5 letters.')
+        alert(`Congratulations, you are right! Today's word is ${secretWord}`);
+    } else if (userInput.length < width) { // Check for length
+        alert('Your guess must be 5 letters.');
     } else { 
-        const isValid = await isValidWord(userInput);
+        const isValid = await isValidWord(userInput); // Validate the word
         if (!isValid) { 
         alert(`${userInput} is not a valid word.`);
         } else {
-    highlight(userInput);
-    row++; 
-    col = 0;
-    guessLeft--;
-    console.log(guessLeft);
+    highlight(userInput); // Highlight tiles based on guess vs secret word
+    row++; // Move to the next row for next guess
+    //col = 0;
+    guessLeft--; // Decrease guesses left
+    console.log(guessLeft);  // Log remaining guesses
+        }
+        if (guessLeft === 0) {
+            alert('Game over! Come back tomorrow for a new word.');
         }
     }   
 };
 
+// Function to highlight the tiles based on the user's guess
 async function isValidWord(word) {
     try {
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word.toLowerCase()}`);
@@ -89,8 +96,8 @@ async function isValidWord(word) {
 
 function highlight(userInput) {
     let tiles = document.querySelectorAll('.tile');
-    for (let i = 0; i < 5; i++) {
-        let tile = tiles[i];
+    for (let i = 0; i < width; i++) {
+        let tile = tiles[row * width + i];
         if(userInput[i] === secretWord[i]) {
             tile.classList.add('green');
         }else if(secretWord.includes(userInput[i])){
