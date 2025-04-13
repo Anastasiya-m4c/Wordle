@@ -3,12 +3,12 @@
 let secretWord = "TRAIN"; 
 
 // Dimensions of the grid for the game
-var height = 6; // Number of rows
-var width = 5; // Number of columns
+let height = 6; // Number of rows
+const width = 5; // Number of columns
 
 // Initial positions for guesses
-var row = 0; 
-var col = 0; 
+let row = 0; 
+let col = 0; 
 
 // Number of guesses left and current guess storage
 let guessLeft = height; 
@@ -24,8 +24,8 @@ window.onload = function() {
 // Function to create and display the input grid for the game
 function initialise() {
     let grid = document.getElementById('grid');
-    for (let r = 0; r < height; r++) {
-        for (let c = 0; c < width; c++) {
+    for (let r = 0; r <height; r++) {
+        for (let c = 0; c <width; c++) {
             let tile = document.createElement('input'); 
             tile.type = 'text';
             tile.maxLength = '1';
@@ -37,7 +37,7 @@ function initialise() {
 };
 
 // Event listener for the submit button click
-$('#submitBtn').on('click', function () {
+document.getElementById('submitBtn').addEventListener('click', function () {
     onSubmit()
 });
 
@@ -50,7 +50,7 @@ async function onSubmit() {
     let userInput = ''; // String to hold the user's guess
 
      // Loop to collect the user's guess from the tiles
-    for (let i = 0; i < width; i++) {
+    for (let i = 0; i <width; i++) {
 
     console.log('TILE: ', document.getElementById(`tile${row}`))
 
@@ -60,7 +60,7 @@ async function onSubmit() {
     // Check if the user's guess matches the secret word
     if (userInput === secretWord) {
         alert(`Congratulations, you are right! Today's word is ${secretWord}`);
-    } else if (userInput.length < width) { // Check for length
+    } else if (userInput.length <width) { // Check for length
         alert('Your guess must be 5 letters.');
     } else { 
         const isValid = await isValidWord(userInput); // Validate the word
@@ -96,7 +96,7 @@ async function isValidWord(word) {
 
 function highlight(userInput) {
     let tiles = document.querySelectorAll('.tile');
-    for (let i = 0; i < width; i++) {
+    for (let i = 0; i <width; i++) {
         let tile = tiles[row * width + i];
         if(userInput[i] === secretWord[i]) {
             tile.classList.add('green');
@@ -130,7 +130,7 @@ function removeLetter() {
 };  
 
 function addLetter(letter) {
-    if (col < width) {
+    if (col <width) {
         let tile = document.getElementById(`tile${row}${col}`);
         tile.value = letter;
         col++;
