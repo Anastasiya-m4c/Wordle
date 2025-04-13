@@ -73,7 +73,7 @@ async function onSubmit() {
     guessLeft--; // Decrease guesses left
     console.log(guessLeft);  // Log remaining guesses
         }
-        if (guessLeft === 0) {
+        if (guessLeft <= 0) {
             alert('Game over! Come back tomorrow for a new word.');
         }
     }   
