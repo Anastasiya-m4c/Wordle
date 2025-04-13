@@ -45,13 +45,15 @@ async function onSubmit() {
         //console.log('userInputTEST: ', userInput)
         //console.log('tile: ', tile)
     //}
-
-
+    
     let tiles = document.querySelectorAll('.tile'); 
+    console.log('row', row)
     let userInput = '';
-    for (let i = 0; i < 5; i++) {
-        console.log('TILE: ', document.getElementById(`tile${row}`))
-        userInput += tiles[i].value.toUpperCase();
+
+    for (let i = row * 5; i < (i + 5); i++) {
+    //for (let i = 0; i < 5; i++) {
+    console.log('TILE: ', document.getElementById(`tile${row}`))
+    userInput += tiles[i].value.toUpperCase();
     }
     if (userInput === secretWord) {
         alert(`Congratulations you are right! Todays word is ${secretWord}`);
@@ -114,9 +116,9 @@ function inputRules() {
 
 function removeLetter() {
     if (col > 0){
-    col--;
+        col--;
         let tile = document.getElementById(`tile${row}${col}`);
-    tile.value = '';
+        tile.value = '';
     }
 };  
 
