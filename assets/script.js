@@ -41,10 +41,8 @@ document.getElementById('submitBtn').addEventListener('click', function () {
     onSubmit()
 });
 
-
 // Function to handle a guess submit
 async function onSubmit() {
-    
     let tiles = document.querySelectorAll('.tile'); // Get all tiles
     console.log('row', row) // Log the current row number
     let userInput = ''; // String to hold the user's guess
@@ -56,7 +54,12 @@ async function onSubmit() {
 
     userInput += tiles[row * width + i].value.toUpperCase(); // Access each tile of the current row
     } 
-
+    //check guess left before submit
+    if (guessLeft <= 0) {
+        alert('No guesses left. Game over!');
+        return;
+    }
+    
     // Check if the user's guess matches the secret word
     if (userInput === secretWord) {
         alert(`Congratulations, you are right! Today's word is ${secretWord}`);
@@ -69,7 +72,7 @@ async function onSubmit() {
         } else {
     highlight(userInput); // Highlight tiles based on guess vs secret word
     row++; // Move to the next row for next guess
-    //col = 0;
+    col = 0;
     guessLeft--; // Decrease guesses left
     console.log(guessLeft);  // Log remaining guesses
         }
