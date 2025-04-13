@@ -10,6 +10,8 @@ const width = 5; // Number of columns
 let row = 0; 
 let col = 0; 
 
+let gameOver = false;
+
 // Number of guesses left and current guess storage
 let guessLeft = height; 
 //let currentGuess = [];
@@ -38,7 +40,9 @@ function initialise() {
 
 // Event listener for the submit button click
 document.getElementById('submitBtn').addEventListener('click', function () {
+    if (!gameOver) {
     onSubmit()
+    }
 });
 
 // Function to handle a guess submit
@@ -62,6 +66,7 @@ async function onSubmit() {
     // Check if the user's guess matches the secret word
     if (userInput === secretWord) {
         alert(`Congratulations, you are right! Today's word is ${secretWord}`);
+        gameOver = true;
     } else if (userInput.length <width) { // Check for length
         alert('Your guess must be 5 letters.');
     } else { 
@@ -84,7 +89,7 @@ async function onSubmit() {
     console.log(guessLeft);  // Log remaining guesses
         }
         if (guessLeft <= 0) {
-            alert('Game over! Come back tomorrow for a new word.');
+            alert(`Game over! Todays word is ${secretWord} Come back tomorrow for a new word.`);
         }
     }   
 };
@@ -120,6 +125,7 @@ function highlight(userInput) {
 
 function inputRules() {
     document.body.onkeyup = (e) => {
+        if (gameOver) return; 
         const key = e.key.toUpperCase();
         if (key === 'ENTER'){
             onSubmit();
