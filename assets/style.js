@@ -34,19 +34,31 @@ $('#submitBtn').on('click', function () {
 });
 
 async function onSubmit() {
+    //let userInput = '';
+    // Loop through each tile (input box) in the current row
+    //for (let t = 0; t < width; t++) {
+        // Get the tile by its ID, which includes the current row and column
+        //let tile = document.getElementById(`tile${row}${t}`);
+
+        // Add the letter from the tile to the guess, in uppercase
+        //userInput += tile.value.toUpperCase();
+        //console.log('userInputTEST: ', userInput)
+        //console.log('tile: ', tile)
+    //}
+
+
     let tiles = document.querySelectorAll('.tile'); 
     let userInput = '';
     for (let i = 0; i < 5; i++) {
+        console.log('TILE: ', document.getElementById(`tile${row}`))
         userInput += tiles[i].value.toUpperCase();
     }
-
     if (userInput === secretWord) {
         alert(`Congratulations you are right! Todays word is ${secretWord}`);
     } else if (userInput.length < 5) {
         alert('Your guess must be 5 letters.')
     } else { 
-        const isValid = await
-        isValidWord(userInput);
+        const isValid = await isValidWord(userInput);
         if (!isValid) { 
         alert(`${userInput} is not a valid word.`);
         } else {
