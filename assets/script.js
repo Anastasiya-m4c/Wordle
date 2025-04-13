@@ -49,11 +49,10 @@ async function onSubmit() {
 
      // Loop to collect the user's guess from the tiles
     for (let i = 0; i <width; i++) {
-
     console.log('TILE: ', document.getElementById(`tile${row}`))
-
     userInput += tiles[row * width + i].value.toUpperCase(); // Access each tile of the current row
     } 
+
     //check guess left before submit
     if (guessLeft <= 0) {
         alert('No guesses left. Game over!');
@@ -71,6 +70,12 @@ async function onSubmit() {
         alert(`${userInput} is not a valid word.`);
         } else {
     highlight(userInput); // Highlight tiles based on guess vs secret word
+
+    // Stop user from editing previous guesses
+    for (let i = 0; i < width; i++) {
+        tiles[(row - 1) * width + i].disabled = true;
+    }
+    
     row++; // Move to the next row for next guess
     col = 0;
     guessLeft--; // Decrease guesses left
