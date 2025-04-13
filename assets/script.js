@@ -72,9 +72,11 @@ async function onSubmit() {
     highlight(userInput); // Highlight tiles based on guess vs secret word
 
     // Stop user from editing previous guesses
+    if (row >0) {
     for (let i = 0; i < width; i++) {
         tiles[(row - 1) * width + i].disabled = true;
     }
+}
     
     row++; // Move to the next row for next guess
     col = 0;
