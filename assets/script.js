@@ -11,11 +11,8 @@ let row = 0;
 let col = 0; 
 
 let gameOver = false;
-
-// Number of guesses left and current guess storage
 let guessLeft = height; 
-//let currentGuess = [];
-//let nextLetter = 0; 
+
 
 // Runs when the window has finished loading
 window.onload = function() {
@@ -48,24 +45,20 @@ document.getElementById('submitBtn').addEventListener('click', function () {
 // Function to handle a guess submit
 async function onSubmit() {
     let tiles = document.querySelectorAll('.tile'); // Get all tiles
-    console.log('row', row) // Log the current row number
     let userInput = ''; // String to hold the user's guess
-
-     // Loop to collect the user's guess from the tiles
-    for (let i = 0; i <width; i++) {
-    console.log('TILE: ', document.getElementById(`tile${row}`))
+    for (let i = 0; i < width; i++) { // Loop to collect the user's guess from the tiles
     userInput += tiles[row * width + i].value.toUpperCase(); // Access each tile of the current row
     } 
-
-    //check guess left before submit
-    if (guessLeft <= 0) {
+    if (guessLeft <= 0) { //check guess left before submit
         alert('No guesses left. Game over!');
         return;
     }
-    if (userInput.length <width) { // Check for length
+    if (userInput.length < width) { // Check for length
         alert('Your guess must be 5 letters.');
+        return;
     } else if (userInput === secretWord) {  // Check if the user's guess matches the secret word
         alert(`Congratulations, you are right! Today's word is ${secretWord}`);
+        highlight(userInput)
         gameOver = true;
         return;
     } else { 
@@ -79,10 +72,9 @@ async function onSubmit() {
     // Stop user from editing previous guesses
     if (row >0) {
     for (let i = 0; i < width; i++) {
-        tiles[(row - 1) * width + i].disabled = true;
+        tiles[row * width + i].disabled = true;
     }
 }
-    
     row++; // Move to the next row for next guess
     col = 0;
     guessLeft--; // Decrease guesses left
