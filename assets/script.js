@@ -51,15 +51,17 @@ async function onSubmit() {
     } 
     if (guessLeft <= 0) { //check guess left before submit
         alert('No guesses left. Game over!');
+        disableBtn();
         return;
     }
     if (userInput.length < width) { // Check for length
         alert('Your guess must be 5 letters.');
         return;
     } else if (userInput === secretWord) {  // Check if the user's guess matches the secret word
+        highlight(userInput);
         alert(`Congratulations, you are right! Today's word is ${secretWord}`);
-        highlight(userInput)
         gameOver = true;
+        disableBtn();
         return;
     } else { 
         const isValid = await isValidWord(userInput); // Validate the word
