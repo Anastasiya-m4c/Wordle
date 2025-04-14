@@ -101,6 +101,7 @@ async function onSubmit() {
         if (guessLeft <= 0) {
             alert(`Game over! Todays word is ${secretWord} Come back tomorrow for a new word.`);
             gameOver = true;
+            disableBtn();
             return;
         }
     }   
