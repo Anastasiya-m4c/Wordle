@@ -67,10 +67,12 @@ async function onSubmit() {
     } else if (userInput === secretWord) {  // Check if the user's guess matches the secret word
         alert(`Congratulations, you are right! Today's word is ${secretWord}`);
         gameOver = true;
+        return;
     } else { 
         const isValid = await isValidWord(userInput); // Validate the word
         if (!isValid) { 
         alert(`${userInput} is not a valid word.`);
+        return;
         } else {
     highlight(userInput); // Highlight tiles based on guess vs secret word
 
@@ -124,7 +126,8 @@ function highlight(userInput) {
 //function to introduce the input rules for keypresses
 function inputRules() {
     document.body.onkeyup = (e) => {
-        if (gameOver) return; 
+        if (gameOver) 
+            return; 
         const key = e.key.toUpperCase();
         if (key === 'ENTER'){
             onSubmit();
