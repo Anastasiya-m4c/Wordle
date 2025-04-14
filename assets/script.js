@@ -1,6 +1,6 @@
 
 // The secret word that the user is trying to guess
-let secretWord = "FISHY"; 
+let secretWord = "BONUS"; 
 
 // Dimensions of the grid for the game
 let height = 6; // Number of rows
@@ -71,18 +71,18 @@ async function onSubmit() {
         return;
     }
     if (userInput.length < width) { // Check for length
-        alert('Your guess must be 5 letters.');
+        alert('At this point, are you guessing words or just angrily typing letters?');
         return;
     } else if (userInput === secretWord) {  // Check if the user's guess matches the secret word
         highlight(userInput);
-        alert(`Congratulations, you are right! Today's word is ${secretWord}`);
+        alert(getRandomCongratsMessage(secretWord));
         gameOver = true;
         disableBtn();
         return;
     } else { 
         const isValid = await isValidWord(userInput); // Validate the word
         if (!isValid) { 
-            alert(`${userInput} is not a valid word.`);
+            alert(`At this point, are you guessing words or just angrily typing letters? ${userInput} is not a valid word.`);
             return;
         } else {
             highlight(userInput); // Highlight tiles based on guess vs secret word
@@ -186,3 +186,22 @@ function disableBtn() {
         btn.classList.add('disabled');
     } 
 }
+
+const congratsMessages = [
+    (word) => `Yay! "${word}" is correct! Look at you, crushing the word game like a pro 🎉`,
+    (word) => `Boom! "${word}" it is! Your keyboard deserves a high five 👏`,
+    (word) => `You did it! "${word}" was the word! Somewhere, a dictionary is applauding you.`,
+    (word) => `Correcto-mundo! "${word}" is the word! Someone call the Wordle Hall of Fame.`,
+    (word) => `Nailed it! "${word}" is the one. We knew you had it in you (eventually 😉)`,
+    (word) => `Go you! "${word}" was 100% correct. Go treat yourself to a snack. You earned it.`,
+    (word) => `Winner winner vocab dinner! "${word}" is correct 🎊 Word mastery unlocked.`,
+    (word) => `Yes!! "${word}" was the right word. That brain of yours? Chef’s kiss 👨‍🍳💡`,
+    (word) => `Big brain alert! "${word}" was spot on. You’re kind of a word genius now.`,
+    (word) => `Five letters. Zero doubts. "${word}" is right — you should put this on your résumé.`,
+];
+
+function getRandomCongratsMessage(secretWord) {
+    const randomIndex = Math.floor(Math.random() * congratsMessages.length);
+    return congratsMessages[randomIndex](secretWord);  
+}
+
