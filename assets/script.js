@@ -62,13 +62,11 @@ async function onSubmit() {
         alert('No guesses left. Game over!');
         return;
     }
-    
-    // Check if the user's guess matches the secret word
-    if (userInput === secretWord) {
+    if (userInput.length <width) { // Check for length
+        alert('Your guess must be 5 letters.');
+    } else if (userInput === secretWord) {  // Check if the user's guess matches the secret word
         alert(`Congratulations, you are right! Today's word is ${secretWord}`);
         gameOver = true;
-    } else if (userInput.length <width) { // Check for length
-        alert('Your guess must be 5 letters.');
     } else { 
         const isValid = await isValidWord(userInput); // Validate the word
         if (!isValid) { 
@@ -123,6 +121,7 @@ function highlight(userInput) {
     }
 };    
 
+//function to introduce the input rules for keypresses
 function inputRules() {
     document.body.onkeyup = (e) => {
         if (gameOver) return; 
@@ -137,6 +136,7 @@ function inputRules() {
     };
 };
 
+// function to remove letter 
 function removeLetter() {
     if (col > 0){
         col--;
@@ -145,6 +145,7 @@ function removeLetter() {
     }
 };  
 
+//function to add letter 
 function addLetter(letter) {
     if (col <width) {
         let tile = document.getElementById(`tile${row}${col}`);
@@ -154,6 +155,7 @@ function addLetter(letter) {
     }
 };
 
+//function to check if the onput is = to a letter
 function isLetter(key) {
     return key.length === 1 && key.match(/[a-zA-Z]/i);
 };
