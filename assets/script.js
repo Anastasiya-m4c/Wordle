@@ -23,17 +23,33 @@ window.onload = function() {
 // Function to create and display the input grid for the game
 function initialise() {
     let grid = document.getElementById('grid');
-    for (let row = 0; row <height; row++) {
-        for (let col = 0; col <width; col++) {
+    for (let row = 0; row < height; row++) {
+        for (let col = 0; col < width; col++) {
             let tile = document.createElement('input'); 
             tile.type = 'text';
             tile.maxLength = '1';
             tile.classList.add('tile');
             tile.id = `tile${row}${col}`;
+            tile.disabled = true; 
             grid.appendChild(tile);
         }
     }
+    setRowActive(row);
 };
+
+//Function provided by chat GPT to helpenabling current row for typing 
+function setRowActive(rowIndex) {
+    const tiles = document.querySelectorAll('.tile');
+    tiles.forEach((tile, index) => {
+        const tileRow = Math.floor(index / width); // Get the row number
+        if (tileRow === rowIndex) {
+            tile.disabled = false; // Enable the current row
+        } else {
+            tile.disabled = true; // Disable all other rows
+        }
+    });
+}
+
 
 // Event listener for the submit button click
 document.getElementById('submitBtn').addEventListener('click', function () {
@@ -69,18 +85,17 @@ async function onSubmit() {
         alert(`${userInput} is not a valid word.`);
         return;
         } else {
-    highlight(userInput); // Highlight tiles based on guess vs secret word
-
-    // Stop user from editing previous guesses
-    if (row >0) {
-    for (let i = 0; i < width; i++) {
-        tiles[row * width + i].disabled = true;
-    }
-}
-    row++; // Move to the next row for next guess
-    col = 0;
-    guessLeft--; // Decrease guesses left
-    console.log(guessLeft);  // Log remaining guesses
+            highlight(userInput); // Highlight tiles based on guess vs secret word
+            
+            if (row >0) { // Stop user from editing previous guesses
+            for (let i = 0; i < width; i++) {
+            tiles[row * width + i].disabled = true;
+            }
+        }
+        row++; // Move to the next row for next guess
+        col = 0;
+        guessLeft--; // Decrease guesses left
+        console.log(guessLeft);  // Log remaining guesses
         }
         if (guessLeft <= 0) {
             alert(`Game over! Todays word is ${secretWord} Come back tomorrow for a new word.`);
