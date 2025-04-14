@@ -87,7 +87,7 @@ async function onSubmit() {
         } else {
             highlight(userInput); // Highlight tiles based on guess vs secret word
         //for loop provided by chat gpt to disable all previous rows after the guess is made    
-        for (let r = 0; r < row; r++) {
+        for (let r = 0; r < hight; r++) {
             for (let c = 0; c < width; c++) {
                 tiles[r * width + c].disabled = true; 
             }
@@ -122,14 +122,14 @@ async function isValidWord(word) {
 
 function highlight(userInput) {
     let tiles = document.querySelectorAll('.tile');
-    for (let i = 0; i <width; i++) {
+    for (let i = 0; i < width; i++) {
         let tile = tiles[row * width + i];
-        if(userInput[i] === secretWord[i]) {
+        if (userInput[i] === secretWord[i]) {
             tile.classList.add('green');
-        }else if(secretWord.includes(userInput[i])){
+        } else if (secretWord.includes(userInput[i])){
             tile.classList.add('yellow');
-        }else {
-            tile.classList.add('gray')
+        } else {
+            tile.classList.add('gray');
         }
     }
 };    
@@ -147,7 +147,7 @@ function inputRules() {
         }else if (isLetter(key)){
             addLetter(key);
         }
-    };
+    }
 };
 
 // function to remove letter 
@@ -166,10 +166,14 @@ function addLetter(letter) {
         tile.value = letter;
         tile.focus();
         col++;
+        //automatically focus the next tile if available
+        if (col < width) {
+            document.getElementById(`tiles${row}${col}`).focus();
+        }
     }
 };
 
-//function to check if the onput is = to a letter
+//function to check if the input is = to a letter
 function isLetter(key) {
     return key.length === 1 && key.match(/[a-zA-Z]/i);
 };
