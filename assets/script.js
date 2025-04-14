@@ -64,12 +64,7 @@ async function onSubmit() {
     for (let i = 0; i < width; i++) { // Loop to collect the user's guess from the tiles
         userInput += tiles[row * width + i].value.toUpperCase(); // Access each tile of the current row
     } 
-    if (guessLeft <= 0) { //check guess left before submit
-        showBootstrapModal('No guesses left. Game over!');
-        disableBtn();
-        gameOver = true
-        return;
-    } else if (userInput.length < width) { // Check for length
+    if (userInput.length < width) { // Check for length
         showBootstrapModal("This is a 5-letter word game. Not 4. Not 6. Just... 5. Wild concept.");
         return;
     } else if (userInput === secretWord) {  // Check if the user's guess matches the secret word
@@ -97,12 +92,12 @@ async function onSubmit() {
         setRowActive(row);
         console.log(guessLeft);  // Log remaining guesses
         }
-        //if (guessLeft <= 0) {
-        //    alert(`Game over! Todays word is ${secretWord} Come back tomorrow for a new word.`);
-        //   gameOver = true;
-        //    disableBtn();
-        //    return;
-        //}
+        if (guessLeft <= 0) {
+        showBootstrapModal('No guesses left. Game over!');
+        gameOver = true;
+        disableBtn();
+        return;
+        }
     }   
 };
 
