@@ -1,4 +1,3 @@
-
 // The secret word that the user is trying to guess
 let secretWord = "BONUS"; 
 
@@ -170,7 +169,7 @@ function addLetter(letter) {
         col++;
         //automatically focus the next tile if available
         if (col < width) {
-            document.getElementById(`tiles${row}${col}`)//.focus();
+            document.getElementById(`tiles${row}${col}`)?.focus();
         }
     }
 };
