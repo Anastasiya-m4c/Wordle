@@ -205,3 +205,10 @@ function getRandomCongratsMessage(secretWord) {
     return congratsMessages[randomIndex](secretWord);  
 }
 
+//function that enables boostrtap modal and inserts a random message
+function showBootstrapModal(message) {
+    const modalBody = document.getElementById('modalBody');
+    modalBody.innerHTML = message;
+    const myModal = new bootstrap.Modal(document.getElementById('gameModal'));
+    myModal.show();
+}  
