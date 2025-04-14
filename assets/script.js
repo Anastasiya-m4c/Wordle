@@ -66,23 +66,23 @@ async function onSubmit() {
         userInput += tiles[row * width + i].value.toUpperCase(); // Access each tile of the current row
     } 
     if (guessLeft <= 0) { //check guess left before submit
-        alert('No guesses left. Game over!');
+        showBootstrapModal('No guesses left. Game over!');
         disableBtn();
+        gameOver = true
         return;
-    }
-    if (userInput.length < width) { // Check for length
-        alert('At this point, are you guessing words or just angrily typing letters?');
+    } else if (userInput.length < width) { // Check for length
+        showBootstrapModal("This is a 5-letter word game. Not 4. Not 6. Just... 5. Wild concept.");
         return;
     } else if (userInput === secretWord) {  // Check if the user's guess matches the secret word
         highlight(userInput);
-        alert(getRandomCongratsMessage(secretWord));
+        showBootstrapModal(getRandomCongratsMessage(secretWord));
         gameOver = true;
         disableBtn();
         return;
     } else { 
         const isValid = await isValidWord(userInput); // Validate the word
         if (!isValid) { 
-            alert(`At this point, are you guessing words or just angrily typing letters? ${userInput} is not a valid word.`);
+            showBootstrapModal(`At this point, are you guessing words or just angrily typing letters? ${userInput} is not a valid word.`);
             return;
         } else {
             highlight(userInput); // Highlight tiles based on guess vs secret word
@@ -98,12 +98,12 @@ async function onSubmit() {
         setRowActive(row);
         console.log(guessLeft);  // Log remaining guesses
         }
-        if (guessLeft <= 0) {
-            alert(`Game over! Todays word is ${secretWord} Come back tomorrow for a new word.`);
-            gameOver = true;
-            disableBtn();
-            return;
-        }
+        //if (guessLeft <= 0) {
+        //    alert(`Game over! Todays word is ${secretWord} Come back tomorrow for a new word.`);
+        //   gameOver = true;
+        //    disableBtn();
+        //    return;
+        //}
     }   
 };
 
