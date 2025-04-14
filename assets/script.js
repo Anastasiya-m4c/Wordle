@@ -37,7 +37,7 @@ function initialise() {
     setRowActive(row);
 };
 
-//Function provided by chat GPT to helpenabling current row for typing 
+//Function provided by chat GPT to enable current row for typing 
 function setRowActive(rowIndex) {
     const tiles = document.querySelectorAll('.tile');
     tiles.forEach((tile, index) => {
@@ -63,7 +63,7 @@ async function onSubmit() {
     let tiles = document.querySelectorAll('.tile'); // Get all tiles
     let userInput = ''; // String to hold the user's guess
     for (let i = 0; i < width; i++) { // Loop to collect the user's guess from the tiles
-    userInput += tiles[row * width + i].value.toUpperCase(); // Access each tile of the current row
+        userInput += tiles[row * width + i].value.toUpperCase(); // Access each tile of the current row
     } 
     if (guessLeft <= 0) { //check guess left before submit
         alert('No guesses left. Game over!');
@@ -82,14 +82,14 @@ async function onSubmit() {
     } else { 
         const isValid = await isValidWord(userInput); // Validate the word
         if (!isValid) { 
-        alert(`${userInput} is not a valid word.`);
-        return;
+            alert(`${userInput} is not a valid word.`);
+            return;
         } else {
             highlight(userInput); // Highlight tiles based on guess vs secret word
-            
-            if (row >0) { // Stop user from editing previous guesses
-            for (let i = 0; i < width; i++) {
-            tiles[row * width + i].disabled = true;
+        //for loop provided by chat gpt to disable all previous rows after the guess is made    
+        for (let r = 0; r < row; r++) {
+            for (let c = 0; c < width; c++) {
+                tiles[r * width + c].disabled = true; 
             }
         }
         row++; // Move to the next row for next guess
