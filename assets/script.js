@@ -93,7 +93,7 @@ async function onSubmit() {
         console.log(guessLeft);  // Log remaining guesses
         }
         if (guessLeft <= 0) {
-        showBootstrapModal('No guesses left. Game over!');
+        showBootstrapModal(getRandomOutOfGuessesMessage(secretWord));
         gameOver = true;
         disableBtn();
         return;
@@ -181,6 +181,24 @@ function disableBtn() {
     } 
 }
 
+function getRandomCongratsMessage(secretWord) {
+    const randomIndex = Math.floor(Math.random() * congratsMessages.length);
+    return congratsMessages[randomIndex](secretWord);  
+}
+
+function getRandomOutOfGuessesMessage(secretWord) {
+    const index = Math.floor(Math.random() * outOfGuessesMessages.length);
+    return outOfGuessesMessages[index](secretWord);
+}
+
+
+//function that enables boostrtap modal and inserts a random message
+function showBootstrapModal(message) {
+    const modalBody = document.getElementById('modalBody');
+    modalBody.innerHTML = message;
+    const myModal = new bootstrap.Modal(document.getElementById('gameModal'));
+    myModal.show();
+}  
 const congratsMessages = [
     (word) => `Yay! "${word}" is correct! Look at you, crushing the word game like a pro 🎉`,
     (word) => `Boom! "${word}" it is! Your keyboard deserves a high five 👏`,
@@ -194,15 +212,10 @@ const congratsMessages = [
     (word) => `Five letters. Zero doubts. "${word}" is right — you should put this on your résumé.`,
 ];
 
-function getRandomCongratsMessage(secretWord) {
-    const randomIndex = Math.floor(Math.random() * congratsMessages.length);
-    return congratsMessages[randomIndex](secretWord);  
-}
+const outOfGuessesMessages = [
+    (word) => `No more guesses. The word was "${word}". But hey, at least you looked cool trying.`,
+    (word) => `"${word}" was the word. And no, typing angrily doesn’t count as strategy.`,
+    (word) => `That’s all 6. The word was "${word}". Consider yourself alphabetically humbled.`,
+    (word) => `Out of guesses! The word was "${word}". Somewhere, a dictionary just sighed.`,
+];
 
-//function that enables boostrtap modal and inserts a random message
-function showBootstrapModal(message) {
-    const modalBody = document.getElementById('modalBody');
-    modalBody.innerHTML = message;
-    const myModal = new bootstrap.Modal(document.getElementById('gameModal'));
-    myModal.show();
-}  
