@@ -90,6 +90,8 @@ async function onSubmit() {
         }
         if (guessLeft <= 0) {
             alert(`Game over! Todays word is ${secretWord} Come back tomorrow for a new word.`);
+            gameOver = true;
+            return;
         }
     }   
 };
@@ -162,3 +164,10 @@ function addLetter(letter) {
 function isLetter(key) {
     return key.length === 1 && key.match(/[a-zA-Z]/i);
 };
+
+function disableBtn() {
+    if (gameOver) {
+        let btn = document.getElementById('submitBtn'); 
+        btn.classList.add('disabled');
+    } 
+}
