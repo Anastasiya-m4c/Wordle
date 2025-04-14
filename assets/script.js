@@ -1,6 +1,6 @@
 
 // The secret word that the user is trying to guess
-let secretWord = "TRAIN"; 
+let secretWord = "FISHY"; 
 
 // Dimensions of the grid for the game
 let height = 6; // Number of rows
