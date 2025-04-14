@@ -87,7 +87,7 @@ async function onSubmit() {
         } else {
             highlight(userInput); // Highlight tiles based on guess vs secret word
         //for loop provided by chat gpt to disable all previous rows after the guess is made    
-        for (let r = 0; r < hight; r++) {
+        for (let r = 0; r < row; r++) {
             for (let c = 0; c < width; c++) {
                 tiles[r * width + c].disabled = true; 
             }
@@ -95,6 +95,7 @@ async function onSubmit() {
         row++; // Move to the next row for next guess
         col = 0;
         guessLeft--; // Decrease guesses left
+        setRowActive(row);
         console.log(guessLeft);  // Log remaining guesses
         }
         if (guessLeft <= 0) {
@@ -168,7 +169,7 @@ function addLetter(letter) {
         col++;
         //automatically focus the next tile if available
         if (col < width) {
-            document.getElementById(`tiles${row}${col}`).focus();
+            document.getElementById(`tiles${row}${col}`)//.focus();
         }
     }
 };
