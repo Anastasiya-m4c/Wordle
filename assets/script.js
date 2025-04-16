@@ -16,7 +16,7 @@ const diffInTime = today - startDate; // Difference in milliseconds
 const diffInDays = Math.floor(diffInTime / (1000 * 3600 * 24)); // Convert to days
 const secretWord = dailyWords[diffInDays % dailyWords.length]; // Pick word based on the day
 
-console.log(secretWord); // This will log today's word
+//console.log(secretWord); // This will log today's word
 
 
 // Dimensions of the grid for the game
