@@ -1,11 +1,11 @@
 // Array of daily words
 const dailyWords = [
-    "apple", "grape", "table", "stone", "flame",
-    "water", "plant", "smile", "dance", "watch",
-    "cloud", "dream", "chair", "lunch", "light",
-    "happy", "beach", "tiger", "pizza", "vocal",
-    "guitar", "flute", "night", "river", "earth",
-    "piano", "magic", "glove", "peace", "ghost"
+    "APPLE", "GRAPE", "TABLE", "STONE", "FLAME",
+    "WATER", "PLANT", "SMILE", "DANCE", "WATCH",
+    "CLOUD", "DREAM", "CHAIR", "LUNCH", "LIGHT",
+    "HAPPY", "BEACH", "TIGER", "PIZZA", "VOCAL",
+    "GUITAR", "FLUTE", "NIGHT", "RIVER", "EARTH",
+    "PIANO", "MAGIC", "GLOVE", "PEACE", "GHOST"
 ];
 
 //Code used from chat GPT to change word daily.
