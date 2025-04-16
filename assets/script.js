@@ -30,6 +30,7 @@ function initialise() {
             tile.classList.add('tile');
             tile.id = `tile${row}${col}`;
             tile.disabled = true; 
+            tile.setAttribute = ('aria-label', 'letter input tile')
             grid.appendChild(tile);
         }
     }
@@ -164,7 +165,7 @@ function addLetter(letter) {
         col++;
         //automatically focus the next tile if available
         if (col < width) {
-            document.getElementById(`tiles${row}${col}`)?.focus();
+            document.getElementById(`tile${row}${col}`)?.focus();
         }
     }
 };
@@ -199,6 +200,7 @@ function showBootstrapModal(message) {
     const myModal = new bootstrap.Modal(document.getElementById('gameModal'));
     myModal.show();
 }  
+
 const congratsMessages = [
     (word) => `Yay! "${word}" is correct! Look at you, crushing the word game like a pro 🎉`,
     (word) => `Boom! "${word}" it is! Your keyboard deserves a high five 👏`,
