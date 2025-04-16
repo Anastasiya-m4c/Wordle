@@ -40,8 +40,8 @@ window.onload = function() {
 // Function to create and display the input grid for the game
 function initialise() {
     let grid = document.getElementById('grid');
-    for (row = 0; row < height; row++) {
-        for (col = 0; col < width; col++) {
+    for (let row = 0; row < height; row++) {
+        for (let col = 0; col < width; col++) {
             let tile = document.createElement('input');
             tile.type = 'text';
             tile.maxLength = '1';
@@ -232,12 +232,12 @@ const congratsMessages = [
     (word) => `Yes!! "${word}" was the right word. That brain of yours? Chef’s kiss 👨‍🍳💡`,
     (word) => `Big brain alert! "${word}" was spot on. You’re kind of a word genius now.`,
     (word) => `Five letters. Zero doubts. "${word}" is right — you should put this on your résumé.`,
-]
+];
 
 const outOfGuessesMessages = [
     (word) => `No more guesses. The word was "${word}". But hey, at least you looked cool trying.`,
     (word) => `"${word}" was the word. And no, typing angrily doesn’t count as strategy.`,
     (word) => `That’s all 6. The word was "${word}". Consider yourself alphabetically humbled.`,
     (word) => `Out of guesses! The word was "${word}". Somewhere, a dictionary just sighed.`,
-]
+];
 
