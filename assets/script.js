@@ -153,6 +153,7 @@ function removeLetter() {
         col--;
         let tile = document.getElementById(`tile${row}${col}`);
         tile.value = '';
+        tile.focus();
     }
 };  
 
