@@ -1,11 +1,29 @@
-// The secret word that the user is trying to guess
-let secretWord = "BONUS"; 
+// Array of daily words
+const dailyWords = [
+    "apple", "grape", "table", "stone", "flame",
+    "water", "plant", "smile", "dance", "watch",
+    "cloud", "dream", "chair", "lunch", "light",
+    "happy", "beach", "tiger", "pizza", "vocal",
+    "guitar", "flute", "night", "river", "earth",
+    "piano", "magic", "glove", "peace", "ghost"
+];
+
+//Code used from chat GPT to change word daily.
+// Use date-based indexing to pick the daily word
+const today = new Date();
+const startDate = new Date(today.getFullYear(), 0, 0); // Jan 1 of the current year
+const diffInTime = today - startDate; // Difference in milliseconds
+const diffInDays = Math.floor(diffInTime / (1000 * 3600 * 24)); // Convert to days
+const secretWord = dailyWords[diffInDays % dailyWords.length]; // Pick word based on the day
+
+console.log(secretWord); // This will log today's word
+
 
 // Dimensions of the grid for the game
 let height = 6; // Number of rows
 const width = 5; // Number of columns
 
-// Initial positions for guesses
+// Initial positions for guesses and game state 
 let row = 0; 
 let col = 0; 
 
@@ -49,7 +67,6 @@ function setRowActive(rowIndex) {
         }
     });
 }
-
 
 // Event listener for the submit button click
 document.getElementById('submitBtn').addEventListener('click', function () {
