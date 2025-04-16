@@ -23,12 +23,12 @@ const secretWord = dailyWords[diffInDays % dailyWords.length]; // Pick word base
 let height = 6; // Number of rows
 const width = 5; // Number of columns
 
-// Initial positions for guesses and game state 
-let row = 0; 
-let col = 0; 
+// Initial positions for guesses and game state
+let row = 0;
+let col = 0;
 
 let gameOver = false;
-let guessLeft = height; 
+let guessLeft = height;
 
 
 // Runs when the window has finished loading
@@ -40,20 +40,20 @@ window.onload = function() {
 // Function to create and display the input grid for the game
 function initialise() {
     let grid = document.getElementById('grid');
-    for (let row = 0; row < height; row++) {
-        for (let col = 0; col < width; col++) {
-            let tile = document.createElement('input'); 
+    for (row = 0; row < height; row++) {
+        for (col = 0; col < width; col++) {
+            let tile = document.createElement('input');
             tile.type = 'text';
             tile.maxLength = '1';
             tile.classList.add('tile');
             tile.id = `tile${row}${col}`;
-            tile.disabled = true; 
-            tile.setAttribute = ('aria-label', 'letter input tile')
+            tile.disabled = true;
+            tile.setAttribute('aria-label','letter input tile');
             grid.appendChild(tile);
         }
     }
     setRowActive(row);
-};
+}
 
 //Function provided by chat GPT to enable current row for typing 
 function setRowActive(rowIndex) {
@@ -79,7 +79,7 @@ document.getElementById('submitBtn').addEventListener('click', function () {
 async function onSubmit() {
     let tiles = document.querySelectorAll('.tile'); // Get all tiles
     let userInput = ''; // String to hold the user's guess
-    for (let i = 0; i < width; i++) { // Loop to collect the user's guess from the tiles
+    for (i = 0; i < width; i++) { // Loop to collect the user's guess from the tiles
         userInput += tiles[row * width + i].value.toUpperCase(); // Access each tile of the current row
     } 
     if (userInput.length < width) { // Check for length
@@ -99,8 +99,8 @@ async function onSubmit() {
         } else {
             highlight(userInput); // Highlight tiles based on guess vs secret word
         //for loop provided by chat gpt to disable all previous rows after the guess is made    
-        for (let r = 0; r < row; r++) {
-            for (let c = 0; c < width; c++) {
+        for (r = 0; r < row; r++) {
+            for (c = 0; c < width; c++) {
                 tiles[r * width + c].disabled = true; 
             }
         }
@@ -117,9 +117,9 @@ async function onSubmit() {
         return;
         }
     }   
-};
+}
 
-// Function to highlight the tiles based on the user's guess
+// Function to check if word is valid
 async function isValidWord(word) {
     try {
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word.toLowerCase()}`);
@@ -132,11 +132,12 @@ async function isValidWord(word) {
         console.error("API error:", error);
         return false; 
     }
-};
+}
 
+// Function to highlight the tiles based on the user's guess
 function highlight(userInput) {
     let tiles = document.querySelectorAll('.tile');
-    for (let i = 0; i < width; i++) {
+    for (i = 0; i < width; i++) {
         let tile = tiles[row * width + i];
         if (userInput[i] === secretWord[i]) {
             tile.classList.add('green');
@@ -146,13 +147,14 @@ function highlight(userInput) {
             tile.classList.add('gray');
         }
     }
-};    
+}
 
 //function to introduce the input rules for keypresses
 function inputRules() {
     document.body.onkeyup = (e) => {
-        if (gameOver) 
-            return; 
+        if (gameOver) {
+            return;
+        } 
         const key = e.key.toUpperCase();
         if (key === 'ENTER'){
             onSubmit();
@@ -162,7 +164,7 @@ function inputRules() {
             addLetter(key);
         }
     }
-};
+}
 
 // function to remove letter 
 function removeLetter() {
@@ -172,7 +174,7 @@ function removeLetter() {
         tile.value = '';
         tile.focus();
     }
-};  
+} 
 
 //function to add letter 
 function addLetter(letter) {
@@ -186,12 +188,12 @@ function addLetter(letter) {
             document.getElementById(`tile${row}${col}`)?.focus();
         }
     }
-};
+}
 
 //function to check if the input is = to a letter
 function isLetter(key) {
     return key.length === 1 && key.match(/[a-zA-Z]/i);
-};
+}
 
 function disableBtn() {
     if (gameOver) {
@@ -230,12 +232,12 @@ const congratsMessages = [
     (word) => `Yes!! "${word}" was the right word. That brain of yours? Chef’s kiss 👨‍🍳💡`,
     (word) => `Big brain alert! "${word}" was spot on. You’re kind of a word genius now.`,
     (word) => `Five letters. Zero doubts. "${word}" is right — you should put this on your résumé.`,
-];
+]
 
 const outOfGuessesMessages = [
     (word) => `No more guesses. The word was "${word}". But hey, at least you looked cool trying.`,
     (word) => `"${word}" was the word. And no, typing angrily doesn’t count as strategy.`,
     (word) => `That’s all 6. The word was "${word}". Consider yourself alphabetically humbled.`,
     (word) => `Out of guesses! The word was "${word}". Somewhere, a dictionary just sighed.`,
-];
+]
 
