@@ -31,9 +31,13 @@ h2 {
     color: #221639;
 }
 
-#submitBtn {
+.btn {
     background-color:#93203baf;
+    border: #781a30;
     color: white;
+}
+.btn:hover {
+    background-color:#93203b63;
 }
 
 .green {
@@ -49,4 +53,9 @@ h2 {
 .yellow {
     background-color: #ffc845;
     border: #815e1e;;
+}
+
+.modal-content {
+    background-color: #f2e8de;
+    color: #221639;
 }
