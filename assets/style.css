@@ -25,15 +25,15 @@ h2 {
     justify-self: center;
     border: 1px solid #9a7736; 
     margin: 2px; 
-    background-color: orange;
+    background-color: #edb855;
     text-transform: uppercase;
     text-align: center;
     color: #221639;
 }
 
 #submitBtn {
-    background-color: #5d3754;
-    color: #FF;
+    background-color:#93203baf;
+    color: white;
 }
 
 .green {
@@ -42,7 +42,7 @@ h2 {
 }
 
 .gray {
-    background-color: #d0d3d4;
+    background-color: #8f8f8f;
     border: #1b365d;
 }
 
