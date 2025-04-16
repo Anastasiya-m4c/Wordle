@@ -25,28 +25,28 @@ h2 {
     justify-self: center;
     border: 1px solid #9a7736; 
     margin: 2px; 
-    background-color: #edb855;
+    background-color: orange;
     text-transform: uppercase;
     text-align: center;
     color: #221639;
 }
 
 #submitBtn {
-    background-color: #bd8576;
-    color: #f2e8de;
+    background-color: #5d3754;
+    color: #FF;
 }
 
 .green {
-    background-color: #5c9475;
-    border: #37604a;
+    background-color: #007a78;
+    border: #003b49;
 }
 
 .gray {
-    background-color: grey;
-    border: rgb(63, 61, 61);
+    background-color: #d0d3d4;
+    border: #1b365d;
 }
 
 .yellow {
-    background-color: rgba(255, 255, 0, 0.836);
+    background-color: #ffc845;
     border: #815e1e;;
 }
