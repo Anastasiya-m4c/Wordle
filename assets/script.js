@@ -48,7 +48,7 @@ function initialise() {
             tile.classList.add('tile');
             tile.id = `tile${row}${col}`;
             tile.disabled = true;
-            tile.setAttribute('aria-label','letter input tile');
+            tile.setAttribute('aria-label', 'letter input tile');
             grid.appendChild(tile);
         }
     }
@@ -69,9 +69,9 @@ function setRowActive(rowIndex) {
 }
 
 // Event listener for the submit button click
-document.getElementById('submitBtn').addEventListener('click', function () {
+document.getElementById('submitBtn').addEventListener('click', function() {
     if (!gameOver) {
-    onSubmit()
+        onSubmit()
     }
 });
 
@@ -81,42 +81,42 @@ async function onSubmit() {
     let userInput = ''; // String to hold the user's guess
     for (i = 0; i < width; i++) { // Loop to collect the user's guess from the tiles
         userInput += tiles[row * width + i].value.toUpperCase(); // Access each tile of the current row
-    } 
+    }
     if (userInput.length < width) { // Check for length
         showBootstrapModal("This is a 5-letter word game. Not 4. Not 6. Just... 5. Wild concept.");
         return;
-    } else if (userInput === secretWord) {  // Check if the user's guess matches the secret word
+    } else if (userInput === secretWord) { // Check if the user's guess matches the secret word
         highlight(userInput);
         showBootstrapModal(getRandomCongratsMessage(secretWord));
         gameOver = true;
         disableBtn();
         return;
-    } else { 
+    } else {
         const isValid = await isValidWord(userInput); // Validate the word
-        if (!isValid) { 
+        if (!isValid) {
             showBootstrapModal(`At this point, are you guessing words or just angrily typing letters? ${userInput} is not a valid word.`);
             return;
         } else {
             highlight(userInput); // Highlight tiles based on guess vs secret word
-        //for loop provided by chat gpt to disable all previous rows after the guess is made    
-        for (r = 0; r < row; r++) {
-            for (c = 0; c < width; c++) {
-                tiles[r * width + c].disabled = true; 
+            //for loop provided by chat gpt to disable all previous rows after the guess is made    
+            for (r = 0; r < row; r++) {
+                for (c = 0; c < width; c++) {
+                    tiles[r * width + c].disabled = true;
+                }
             }
-        }
-        row++; // Move to the next row for next guess
-        col = 0;
-        guessLeft--; // Decrease guesses left
-        setRowActive(row);
-        console.log(guessLeft);  // Log remaining guesses
+            row++; // Move to the next row for next guess
+            col = 0;
+            guessLeft--; // Decrease guesses left
+            setRowActive(row);
+            console.log(guessLeft); // Log remaining guesses
         }
         if (guessLeft <= 0) {
-        showBootstrapModal(getRandomOutOfGuessesMessage(secretWord));
-        gameOver = true;
-        disableBtn();
-        return;
+            showBootstrapModal(getRandomOutOfGuessesMessage(secretWord));
+            gameOver = true;
+            disableBtn();
+            return;
         }
-    }   
+    }
 }
 
 // Function to check if word is valid
@@ -130,7 +130,7 @@ async function isValidWord(word) {
         }
     } catch (error) {
         console.error("API error:", error);
-        return false; 
+        return false;
     }
 }
 
@@ -141,7 +141,7 @@ function highlight(userInput) {
         let tile = tiles[row * width + i];
         if (userInput[i] === secretWord[i]) {
             tile.classList.add('green');
-        } else if (secretWord.includes(userInput[i])){
+        } else if (secretWord.includes(userInput[i])) {
             tile.classList.add('yellow');
         } else {
             tile.classList.add('gray');
@@ -154,13 +154,13 @@ function inputRules() {
     document.body.onkeyup = (e) => {
         if (gameOver) {
             return;
-        } 
+        }
         const key = e.key.toUpperCase();
-        if (key === 'ENTER'){
+        if (key === 'ENTER') {
             onSubmit();
         } else if (key === 'BACKSPACE') {
             removeLetter();
-        }else if (isLetter(key)){
+        } else if (isLetter(key)) {
             addLetter(key);
         }
     }
@@ -168,17 +168,17 @@ function inputRules() {
 
 // function to remove letter 
 function removeLetter() {
-    if (col > 0){
+    if (col > 0) {
         col--;
         let tile = document.getElementById(`tile${row}${col}`);
         tile.value = '';
         tile.focus();
     }
-} 
+}
 
 //function to add letter 
 function addLetter(letter) {
-    if (col <width) {
+    if (col < width) {
         let tile = document.getElementById(`tile${row}${col}`);
         tile.value = letter;
         tile.focus();
@@ -197,14 +197,14 @@ function isLetter(key) {
 
 function disableBtn() {
     if (gameOver) {
-        let btn = document.getElementById('submitBtn'); 
+        let btn = document.getElementById('submitBtn');
         btn.classList.add('disabled');
-    } 
+    }
 }
 
 function getRandomCongratsMessage(secretWord) {
     const randomIndex = Math.floor(Math.random() * congratsMessages.length);
-    return congratsMessages[randomIndex](secretWord);  
+    return congratsMessages[randomIndex](secretWord);
 }
 
 function getRandomOutOfGuessesMessage(secretWord) {
@@ -219,7 +219,7 @@ function showBootstrapModal(message) {
     modalBody.innerHTML = message;
     const myModal = new bootstrap.Modal(document.getElementById('gameModal'));
     myModal.show();
-}  
+}
 
 const congratsMessages = [
     (word) => `Yay! "${word}" is correct! Look at you, crushing the word game like a pro 🎉`,
