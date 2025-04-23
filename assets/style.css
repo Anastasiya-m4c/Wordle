@@ -37,7 +37,7 @@ h2 {
     color: white;
 }
 
-.btn-primary {
+.btn.active {
     background-color:#93203bcd;
     border: #781a30;
     color: white;
