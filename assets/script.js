@@ -59,6 +59,7 @@ function initialise() {
         }
     }
     setRowActive(row);
+    //code from Marco to focus on the first tile when page loads
     document.getElementById(`tile0${col}`)?.focus();
 }
 
