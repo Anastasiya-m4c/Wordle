@@ -87,33 +87,33 @@ Wordelle is a browser-based, daily 5-letter word guessing game that challenges p
 With a clean input-based interface, lively feedback messages, and real dictionary validation, "Daily Word Dash" offers a fun, witty, and interactive way to flex your word skills—one day at a time.
 
 ### In game functions 
-- 🔁 Daily Word Logic
+- Daily Word Logic
 A different word is chosen every day using the current date.
 30 predefined 5-letter words cycle throughout the year.
-- 🔠 Game Grid
+- Game Grid
 A 6-row by 5-column input grid where players enter their guesses.
 Each input is limited to a single character to mimic real letter placement.
-- 🎯 Guess Validation
+- Guess Validation
 Words must be real English words (validated using a dictionary API).
 Invalid entries trigger a humorous modal message.
-- 🌈 Color-Coded Feedback
+- Color-Coded Feedback
 Green: Correct letter in the correct position.
 Yellow: Correct letter, wrong position.
 Gray: Letter not in the word at all.
-- 💬 Dynamic Messaging
+- Dynamic Messaging
 Custom congratulatory or fail messages based on game outcome.
 Adds a touch of humor and personality to each session.
-- ⌨️ Keyboard Interaction
+- Keyboard Interaction
 Supports full keyboard controls:
 Type letters to fill tiles.
 Enter to submit.
 Backspace to delete.
-- 🚫 Game State Handling
+- Game State Handling
 Once the correct word is guessed or attempts run out, inputs and the submit button are disabled to prevent further interaction.
-- 📱 Responsive Input Behavior
+- Responsive Input Behavior
 Auto-focus shifts across input boxes as you type or delete letters.
 Only the current row is editable, preserving game progression.
-- 🧩 User Experience Touches
+- User Experience Touches
 Bootstrap modal integration for feedback.
 Clear accessibility consideration with aria-labels for tiles.
 Automatically highlights the correct word or end-of-game result.
