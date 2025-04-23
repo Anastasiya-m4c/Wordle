@@ -126,8 +126,13 @@ async function isValidWord(word) {
         if (response.ok) {
             return true;
         } else {
-            return false;
-        }
+            if (response.status === 404) {
+                console.log('User entered invalid word')
+                return false;
+                } else {
+                    return false; 
+                }
+            }
     } catch (error) {
         console.error("API error:", error);
         return false;
