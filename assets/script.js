@@ -83,6 +83,12 @@ document.getElementById('submitBtn').addEventListener('click', function() {
 
 // Function to handle a guess submit
 async function onSubmit() {
+
+    // Check if the modal is currently open
+    const modal = document.getElementById('gameModal');
+    const modalVisible = modal.classList.contains('show');
+    if (modalVisible) return; // Don't run onSubmit if modal is open
+
     let tiles = document.querySelectorAll('.tile'); // Get all tiles
     let userInput = ''; // String to hold the user's guess
     for (i = 0; i < width; i++) { // Loop to collect the user's guess from the tiles
@@ -222,7 +228,6 @@ function getRandomOutOfGuessesMessage(secretWord) {
     const index = Math.floor(Math.random() * outOfGuessesMessages.length);
     return outOfGuessesMessages[index](secretWord);
 }
-
 
 //function that enables boostrtap modal and inserts a random message
 function showBootstrapModal(message) {

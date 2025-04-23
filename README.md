@@ -179,7 +179,12 @@ Accessibility tested via Wave & axe DevTools plug ins as well as manual voice ov
 *Cause*: broken file path, needed help of a tutor to understand the error.  
 *Solution*: Updated to a relative file path.  
 
-No outstanding bugs.
+## Known Issues 
+
+- After modal is closed a are hidden worning pops up in the console. This is set by Bootstrap and is expected as tt’s used to hide the modal from screen readers while it’s not visible. When the modal is shown, Bootstrap removes aria-hidden or sets it to false. This is a non issue - no further action is needed. 
+
+
+
 
 ## Deployment
 #### Creating Repository on GitHub
