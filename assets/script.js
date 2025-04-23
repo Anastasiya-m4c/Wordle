@@ -59,6 +59,7 @@ function initialise() {
         }
     }
     setRowActive(row);
+    document.getElementById(`tile0${col}`)?.focus();
 }
 
 //Function provided by chat GPT to enable current row for typing 
