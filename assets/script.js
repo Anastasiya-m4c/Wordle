@@ -51,9 +51,10 @@ function initialise() {
             tile.setAttribute('aria-label', 'letter input tile');
             //Code sugested by chat gpt to fix input issue. 
             tile.addEventListener('keydown', (e) => {
-                e.preventDefault(); // Prevent manual typing
+                if (e.key.length === 1) {
+                    e.preventDefault(); // Block letter/number typing only
+                }
             });
-            
             grid.appendChild(tile);
         }
     }
