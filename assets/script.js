@@ -49,6 +49,11 @@ function initialise() {
             tile.id = `tile${row}${col}`;
             tile.disabled = true;
             tile.setAttribute('aria-label', 'letter input tile');
+            //Code sugested by chat gpt to fix input issue. 
+            tile.addEventListener('keydown', (e) => {
+                e.preventDefault(); // Prevent manual typing
+            });
+            
             grid.appendChild(tile);
         }
     }
