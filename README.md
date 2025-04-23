@@ -1,14 +1,14 @@
 Welcome Anastasiya McAvoy,
 
 ## Code Institute - Milestone project 1: User-Centric Frontend Development
-## WORDELLE
+## WORDLER
 
 ### About
 
 
 View live website [HERE](https://anastasiya-m4c.github.io/Wordle/)
 
-![image from am I responsive to demonstrate responsiveness on the site in all screen sizes]()
+![image from am I responsive to demonstrate responsiveness on the site in all screen sizes](//assets/images/amiresponsive.png)
 
 ## Table Of Contents:
 1. [Design & Planning](#design-&-planning)
@@ -29,32 +29,57 @@ View live website [HERE](https://anastasiya-m4c.github.io/Wordle/)
 ## Design & Planning:  
 
 ### User Stories  
-### 1. User Story: Browse Nail Service
-**As a customer,**  
-I want to browse the various nail services offered by the salon,  
-**So that I can** choose the one that best fits my needs.  
-Acceptance Criteria:  
-Users can view detailed descriptions of services (manicures, pedicures, gel nails, nail art, etc.).  
-Each service includes pricing, duration, and any special offers.  
+### 1. User Story: Guess the word
+**As a user,**  
+As a player, I want to enter a five-letter word,
+**So that I can** 
+try to guess the daily puzzle.
 
-### 2. User Story: Contact & how to find us
-**As a customer,**  
-I want to find contact details, address and parking information about the salon,  
-**So that I can** find the salon and contact the salon if I need to.  
-Acceptance Criteria:  
-Users can view a contact number & email address of the salon.  
-Users can be directed to a map to find the salon.   
-Users can see information about parking.  
+### 2. User Story: User feedback
+**As a user,**  
+I want feedback on each letter after a guess,  
+**So that I can** see which letters are correct, incorrect, or misplaced.  
+
+### 3. User Story: Game limits
+**As a user,**  
+I want to have only six attempts
+**So that the game** remains challenging and fair. 
+
+### 4. User Story: Dynamic messaging
+**As a user,**  
+I want to be notified when I guess the correct word
+**So that I can** celebrate my win. 
+
+### 5. User Story: Auto refresh
+**As a user,**  
+I want the puzzle to reset each day with a new word
+**So that i can** play daily and stay engaged.
+
+### 6. User Story: User feedback
+**As a user,**  
+I want to receive in the moment feedback when the word is not valid or not long enough
+**So that I can** correct my mistake and continue playing. 
+
 
 ### Future developments
-Adding a keyboard 
-Instructions 
-A welcome modal 
+**On-Screen Keyboard Integration**
+**Objective:**
+- Enhance accessibility and user experience by providing an interactive on-screen keyboard.
+**User Story:**
+- As a player, I want access to an on-screen keyboard that reflects the current state of the game (e.g., used, correct, incorrect letters), so that I can more easily input guesses—especially on mobile or touch-screen devices.
+
+**Welcome Modal & Onboarding Experience**
+**Objective:**
+- Introduce new players to the game with a brief, intuitive onboarding flow that outlines the basic rules and mechanics.
+
+**User Story:**
+- As a first-time player, I want to see a welcome modal with a brief explanation of the game, so that I can understand how to play and feel confident before making my first guess.
 
 ### Wireframes
 This game consists of a simple 5x6 grid and does not require a wireframe. 
 
 ### Typography
+The font was intentionally selected to align with the visual style of the popular word game Wordle, so that it's instantly recognised and familiar to players.
 
 ## Features:
 Wordelle is a browser-based, daily 5-letter word guessing game that challenges players to crack a new word puzzle every day. Inspired by the mechanics of popular word game, players have six attempts to guess the secret word of the day. Each guess provides color-coded feedback, guiding players closer to the answer while testing their vocabulary and deduction skills.
@@ -62,33 +87,33 @@ Wordelle is a browser-based, daily 5-letter word guessing game that challenges p
 With a clean input-based interface, lively feedback messages, and real dictionary validation, "Daily Word Dash" offers a fun, witty, and interactive way to flex your word skills—one day at a time.
 
 ### In game functions 
-🔁 Daily Word Logic
+- 🔁 Daily Word Logic
 A different word is chosen every day using the current date.
 30 predefined 5-letter words cycle throughout the year.
-🔠 Game Grid
+- 🔠 Game Grid
 A 6-row by 5-column input grid where players enter their guesses.
 Each input is limited to a single character to mimic real letter placement.
-🎯 Guess Validation
+- 🎯 Guess Validation
 Words must be real English words (validated using a dictionary API).
 Invalid entries trigger a humorous modal message.
-🌈 Color-Coded Feedback
+- 🌈 Color-Coded Feedback
 Green: Correct letter in the correct position.
 Yellow: Correct letter, wrong position.
 Gray: Letter not in the word at all.
-💬 Dynamic Messaging
+- 💬 Dynamic Messaging
 Custom congratulatory or fail messages based on game outcome.
 Adds a touch of humor and personality to each session.
-⌨️ Keyboard Interaction
+- ⌨️ Keyboard Interaction
 Supports full keyboard controls:
 Type letters to fill tiles.
 Enter to submit.
 Backspace to delete.
-🚫 Game State Handling
+- 🚫 Game State Handling
 Once the correct word is guessed or attempts run out, inputs and the submit button are disabled to prevent further interaction.
-📱 Responsive Input Behavior
+- 📱 Responsive Input Behavior
 Auto-focus shifts across input boxes as you type or delete letters.
 Only the current row is editable, preserving game progression.
-🧩 User Experience Touches
+- 🧩 User Experience Touches
 Bootstrap modal integration for feedback.
 Clear accessibility consideration with aria-labels for tiles.
 Automatically highlights the correct word or end-of-game result.
@@ -110,6 +135,8 @@ Automatically highlights the correct word or end-of-game result.
 - Lighthouse - for testing especially performance related issues.
 - Wave evaluation tool - for any accessibility related issues.
 - Chat GPT - for generating site content. 
+- Voiceover - for acesibility testing. 
+- axe DevTools - for any accessibility related issues.
 
 ## Testing
 The site has been tested fully by viewing pages and clicking the links manually in a number of different browsers as well as with a use of assisted tools like dev tools and lighthouse, code checker, wave plug in.
@@ -136,7 +163,7 @@ Nest hub MAX
 ### Code Validation
 Validation completed vith no errors.  
 CCS 
-JS 
+JS linter 
 HTML
 
 ### Manual Testing user stories or/and features
@@ -145,7 +172,7 @@ HTML
 ### Accessibility 
 Colours have been chosen to comply with accessibility contrast standards and tested by using WAVE plug in on chrome.  
 
-Accessibility tested via Wave plug in  
+Accessibility tested via Wave & axe DevTools plug ins as well as manual voice over testing.
 
 ## Bugs  
 *Issue*: site.manifest file error in dev tools - failed to load resource: the server responded with a status of 404 ()  
