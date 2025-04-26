@@ -93,6 +93,13 @@ I want to receive in the moment feedback when the word is not valid or not long 
 **User Story:** 
 - As a player, I want to keep returning to play the game with little change that secret word will repeat.   
 
+**AAA WCAG Accessibility Standards** 
+**Objective:** 
+- Address any outstanding accessibility warnings to achieve AAA standard. 
+
+**User Story:** 
+- I want this game to be fully accessible with best practices followed so that it's fully compatible with assistive technologies.
+
 ### Wireframes
 This game is designed to be simple, clean, and distraction-free, featuring a 5x6 grid and straightforward messaging so players can focus purely on the challenge of winning. Friendly, real-time modal feedback helps guide the experience, while the letter highlighting system supports strategic thinking—making it easy for players to plan their next move with confidence.
 
@@ -197,12 +204,14 @@ HTML
 
 
 ### Accessibility 
-The colors have been carefully selected to comply with accessibility contrast standards, ensuring readability and visual clarity for all users. To verify these standards, the game has been tested using the WAVE & axe DevTools plugins on Chrome, which checks for any potential accessibility issues. 
+The colors have been carefully selected to comply with accessibility contrast standards, ensuring readability and visual clarity for all users. To verify these standards, the game has been tested using the WAVE & axe DevTools plugins on Chrome, which checks for any potential accessibility issues. And in accordance to axe DevTools has acheived a WCAG 2.1 AA standard. 
 
 Additionally, further manual testing with VoiceOver and using tab navigation has also been performed to ensure that the game is fully usabe for users with impairments or using asistive technologies, further enhancing the user experience for a diverse audience.
 
-![axe DevTools]()
-![WAVE]()
+This will be further addressed in the future developments to reach full AAA standard.
+
+![axe DevTools](docs/images/exedevtools.png)
+![WAVE](docs/images/wave.png)
 ![Tab navigation manual testing](docs/images/tabnav_testing.png)
 ![Voice over manual testing](docs/images/voiceover_testing.png)
 
@@ -214,8 +223,9 @@ Additionally, further manual testing with VoiceOver and using tab navigation has
 
 ## Known Issues 
 
-- After modal is closed a are hidden worning pops up in the console. This is set by Bootstrap and is expected as tt’s used to hide the modal from screen readers while it’s not visible. When the modal is shown, Bootstrap removes aria-hidden or sets it to false. This is a non issue - no further action is needed. 
+- After the modal is closed, an aria-hidden warning appears in the console. This is set by Bootstrap and is expected, as it's used to hide the modal from screen readers while it’s not visible. When the modal is shown, Bootstrap removes aria-hidden or sets it to false. This is a non-issue — no further action is needed.
 
+- A 404 API error is received when the user enters an invalid word. This error is expected, as the invalid word is not found in the dictionary and a 404 is returned by the API. This is intelligently handled within the code to show the user a friendly modal pop-up. The console log is returned directly from the API and is not a result of faulty code. This is a non-issue — no further action is needed.
 
 ## Deployment
 #### Creating Repository on GitHub
@@ -235,9 +245,5 @@ The site was deployed to Github Pages using the following method:
 **David Bowers** 
 **Marco**  
 **Kyle**  
-
-### List of used resources:
-   
-
 
 ------
