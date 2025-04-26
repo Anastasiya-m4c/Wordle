@@ -342,7 +342,7 @@ The site was deployed to Github Pages using the following method:
 ### Special thanks:
 
 **David Bowers** for support and mentoring.  
-**Marco** for continuous support and unlimited information and hours of troubleshooting.
+**Marco** for continuous support and unlimited information and hours of troubleshooting.  
 **Kyle** for being my number one motivator and biggest fan.
 
 ---
