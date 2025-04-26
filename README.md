@@ -87,7 +87,7 @@ _User Story:_ As a first-time player, I want to see a welcome modal with a brief
 
 **Engaging features**  
 _Objective:_ Introduced a timer that starts when users enters 1st guess.  
-_User Story:_ I want to see a how long it takes me to guess the daily word so that i can try and beat my score from the previous day.
+_User Story:_ I want to see a how long it takes me to guess the daily word so that i can try and beat my time from the previous day.
 
 **Dictionary API**  
 _Objective:_ Expand the array of daily words, so that user can keep on playing.  
@@ -189,15 +189,13 @@ _User Feedback:_ After completing the MVP, I asked friends and family to test th
 
 ### Google's Lighthouse Performance
 
-WEB brouser
-![index.html](docs/images/main_lighthouse_web.png)
-![404.html](docs/images/404_lighthouse_web.png)
+- WEB browser  
+![index.html](docs/images/main_lighthouse_web.png)  
+![404.html](docs/images/404_lighthouse_web.png)  
 
-Mobile
-![index.html](docs/images/main_lighthouse_mobile.png)
-![404.html](docs/images/404_lighthouse_mob.png)
-
-Results:
+- Mobile  
+![index.html](docs/images/main_lighthouse_mobile.png)   
+![404.html](docs/images/404_lighthouse_mob.png)  
 
 ### Browser Compatibility
 
@@ -215,16 +213,16 @@ This is tested on a combination of real life devices and well as responsive view
 - iPhone 13
 - Serface pro 7
 - Nest hub MAX
-- Google pixel 6
+- Google pixel 8a
 - Web Browser
 
 ### Code Validation
 
 Validation completed vith no errors.
 
-- CSS ![CSS](docs/images/csscheck.png)
-- JSHINT linter ![JSHINT](docs/images/jshintcheck.png)
-- HTML
+- CSS   ![CSS](docs/images/csscheck.png)
+- JSHINT  linter ![JSHINT](docs/images/jshintcheck.png)
+- HTML  
   ![HTML index.html](docs/images/index.htmlcheck.png)
   ![HTML 404.html](docs/images/404.htmlcheck.png)
 
