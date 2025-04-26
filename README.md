@@ -105,6 +105,13 @@ This game is designed to be simple, clean, and distraction-free, featuring a 5x6
 ![Wiferfames for WEB browsers](docs/images/tablet_wireframe.png)  
 ![Wiferfames for WEB browsers](docs/images/web_wireframe.png)
 
+Final MVP version: 
+![Gameplay](docs/images/gameplay.png)  
+![Not a valid word messaging](docs/images/invalidword.png)  
+![Word is less than 5 letters](docs/images/lessthan5.png)
+![Gameplay WIN](docs/images/endgamewin.png)  
+![Gamepay LOSS](docs/images/endgameloss.png)  
+
 ### Typography
 
 The font was intentionally selected to align with the visual style of the popular word game Wordle, so that it's instantly recognized and familiar to players. It’s also clean, ensuring there are no distractions for the thinkers.
