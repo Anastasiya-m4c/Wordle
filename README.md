@@ -8,7 +8,7 @@ Welcome Anastasiya McAvoy,
 
 View live website [HERE](https://anastasiya-m4c.github.io/Wordle/)
 
-![image from am I responsive to demonstrate responsiveness on the site in all screen sizes](//assets/images/amiresponsive.png)
+![image from am I responsive to demonstrate responsiveness on the site in all screen sizes](docs/images/amiresponsive.png)
 
 ## Table Of Contents:
 1. [Design & Planning](#design-&-planning)

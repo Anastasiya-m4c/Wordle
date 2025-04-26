@@ -215,7 +215,7 @@ function disableBtn() {
     if (gameOver) {
         let btn = document.getElementById('submitBtn');
         btn.classList.add('disabled');
-        btn.innerText = "Come back tomorrow for another go"
+        btn.innerText = "Come back tomorrow for another go 🤓"
     }
 }
 
