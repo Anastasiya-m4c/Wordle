@@ -245,81 +245,81 @@ This will be further addressed in the future developments to reach full AAA stan
 
 ## Bugs
 
-_Issue_: Unidentified error seen in Lighthouse for event listener function.
-_Cause_: JS links were left when copied from the index.html file.
-_Solution_: Removed JS links from the 404 page.
+_Issue_: Unidentified error seen in Lighthouse for event listener function.  
+_Cause_: JS links were left when copied from the index.html file.  
+_Solution_: Removed JS links from the 404 page.  
 
-_Issue_: Primary button color on the 404 page was being overridden by Bootstrap's default.
-_Cause_: Bootstrap's default color.
-_Solution_: Applied a fix by targeting the active-btn class of the button instead of the btn class.
+_Issue_: Primary button color on the 404 page was being overridden by Bootstrap's default.  
+_Cause_: Bootstrap's default color.  
+_Solution_: Applied a fix by targeting the active-btn class of the button instead of the btn class.  
 
-_Issue_: Modal fading issue, when pressing enter while modal was open the screen grew darker.
-_Cause_: Event listener was active when the modal was open.
-_Solution_: Disabled the event listener when the modal is open.
+_Issue_: Modal fading issue, when pressing enter while modal was open the screen grew darker.  
+_Cause_: Event listener was active when the modal was open.  
+_Solution_: Disabled the event listener when the modal is open.  
 
-_Issue_: Input field preventing tabbing, causing accessibility issues.
-_Cause_: Default browser option.
-_Solution_: Applied a fix to only include letters and not prevent tabbing.
+_Issue_: Input field preventing tabbing, causing accessibility issues.  
+_Cause_: Default browser option.  
+_Solution_: Applied a fix to only include letters and not prevent tabbing.  
 
-_Issue_: Input issue – when user typed letter starting form tile 2 onward letter input duplicated from tile 1.
-_Cause_: Code expected user to start typing from the first letter in a sequence instead of inputting letters in random order.
-_Solution_: When user manually selects a tile they are automatically redirected to the first tile to type in sequence.
+_Issue_: Input issue – when user typed letter starting form tile 2 onward letter input duplicated from tile 1.  
+_Cause_: Code expected user to start typing from the first letter in a sequence instead of inputting letters in random order.  
+_Solution_: When user manually selects a tile they are automatically redirected to the first tile to type in sequence.  
 
-_Issue_: Validator feedback: background color set to none.
-_Cause_: Not best practive for css code
-_Solution_: Fixed based on validator feedback by setting the background color appropriately.
+_Issue_: Validator feedback: background color set to none.  
+_Cause_: Not best practive for css code.  
+_Solution_: Fixed based on validator feedback by setting the background color appropriately.  
 
-_Issue_: Secret word was not being rendomly selected.
-_Cause_: Function expected uppercase.
-_Solution_: Changed an array to uppercase words.
+_Issue_: Secret word was not being rendomly selected.  
+_Cause_: Function expected uppercase.  
+_Solution_: Changed an array to uppercase words.  
 
-_Issue_: Accessibility labels missing on tiles.
-_Cause_: Aria-label missing form JS grid.
-_Solution_: Added aria-labels to the tiles.
+_Issue_: Accessibility labels missing on tiles.  
+_Cause_: Aria-label missing form JS grid.  
+_Solution_: Added aria-labels to the tiles.  
 
-_Issue_: Submit button enabled when no guesses left.
-_Cause_: As per default code, discovered during UX testing
-_Solution_: Disabled the submit button if no guesses were left.
+_Issue_: Submit button enabled when no guesses left.  
+_Cause_: As per default code, discovered during UX testing.  
+_Solution_: Disabled the submit button if no guesses were left.  
 
-_Issue_: Submit button active after game won/no more guesses.
-_Cause_: As per default code, discovered during UX testing
-_Solution_: Disabled the submit button after the game has been won and when there are no more guesses left.
+_Issue_: Submit button active after game won/no more guesses.  
+_Cause_: As per default code, discovered during UX testing.  
+_Solution_: Disabled the submit button after the game has been won and when there are no more guesses left.  
 
-_Issue_: Correct guess not being highlighted if the game has been won.
-_Cause_: As per design, discovered during UX testing
-_Solution_: Applied a fix to ensure the correct guess is highlighted even if the game has been won.
+_Issue_: Correct guess not being highlighted if the game has been won.  
+_Cause_: As per design, discovered during UX testing.  
+_Solution_: Applied a fix to ensure the correct guess is highlighted even if the game has been won.  
 
-_Issue_: Incorrect r & c references.
-_Cause_: Using r and c instead of appropriate column (col) and row (row) references.
-_Solution_: Changed r and c references to the appropriate column and row.
+_Issue_: Incorrect r & c references.  
+_Cause_: Using r and c instead of appropriate column (col) and row (row) references.  
+_Solution_: Changed r and c references to the appropriate column and row.  
 
-_Issue_: Bug for the uneditable first row.
-_Cause_: Likely the initial state or logic for enabling/disabling rows was incorrectly applied.
-_Solution_: The setRowActive(row) function, called in initialise() with row = 0, ensures that the first row is enabled upon page load.
+_Issue_: Bug for the uneditable first row.  
+_Cause_: Likely the initial state or logic for enabling/disabling rows was incorrectly applied.  
+_Solution_: The setRowActive(row) function, called in initialise() with row = 0, ensures that the first row is enabled upon page load.  
 
 _Issue_: Player could edit previous guesses.
-_Cause_: The logic for disabling rows after a guess was submitted was missing.
-_Solution_: A for loop was added within the onSubmit() function to iterate through all tiles in previous rows and disable them.
+_Cause_: The logic for disabling rows after a guess was submitted was missing.  
+_Solution_: A for loop was added within the onSubmit() function to iterate through all tiles in previous rows and disable them.  
 
-_Issue_: Next row not enabled after submit.
-_Cause_: Caused by adding a loop to disable previous raws after the guess was made.
-_Solution_: Applied a fix to enable the next row once the submit function has run.
+_Issue_: Next row not enabled after submit.  
+_Cause_: Caused by adding a loop to disable previous raws after the guess was made.  
+_Solution_: Applied a fix to enable the next row once the submit function has run.  
 
-_Issue_: onSubmit not working across multiple lines.
-_Cause_: The logic for collecting the user's input from the grid was only considering a single line.
-_Solution_: Changes were made within the onSubmit() function to correctly gather the 5-letter word from the tiles of the current active row.
+_Issue_: onSubmit not working across multiple lines.  
+_Cause_: The logic for collecting the user's input from the grid was only considering a single line.  
+_Solution_: Changes were made within the onSubmit() function to correctly gather the 5-letter word from the tiles of the current active row.  
 
-_Issue_: initialise was a variable instead of a function.
-_Cause_: A typographical error or incorrect declaration during the initial setup.
-_Solution_: Changed the initialise declaration to function initialise() { ... }.
+_Issue_: initialise was a variable instead of a function.  
+_Cause_: A typographical error or incorrect declaration during the initial setup.  
+_Solution_: Changed the initialise declaration to function initialise() { ... }.  
 
-_Issue_: User input alert: less than sign incorrect.
-_Cause_: A typographical error in the conditional statement that checks the length of the user's input.
-_Solution_: Corrected the less than operator (<) in the if (userInput.length < width) { ... } condition.
+_Issue_: User input alert: less than sign incorrect.  
+_Cause_: A typographical error in the conditional statement that checks the length of the user's input.  
+_Solution_: Corrected the less than operator (<) in the if (userInput.length < width) { ... } condition.  
 
-_Issue_: Typo: tile* instead of tlie in JS file.
-*Cause*: A simple typographical error when referencing the tile class or element.
-*Solution\*: Corrected the spelling.
+_Issue_: Typo: tile* instead of tlie in JS file.  
+_Cause_: A simple typographical error when referencing the tile class or element.  
+_Solution_: Corrected the spelling.  
 
 ## Known Issues
 
