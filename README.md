@@ -105,7 +105,7 @@ This game is designed to be simple, clean, and distraction-free, featuring a 5x6
 ![Wiferfames for WEB browsers](docs/images/tablet_wireframe.png)  
 ![Wiferfames for WEB browsers](docs/images/web_wireframe.png)
 
-Final MVP version: 
+Final MVP version:  
 ![Gameplay](docs/images/gameplay.png)  
 ![Not a valid word messaging](docs/images/invalidword.png)  
 ![Word is less than 5 letters](docs/images/lessthan5.png)
@@ -220,8 +220,10 @@ This is tested on a combination of real life devices and well as responsive view
 
 Validation completed vith no errors.
 
-- CSS   ![CSS](docs/images/csscheck.png)
-- JSHINT  linter ![JSHINT](docs/images/jshintcheck.png)
+- CSS    
+![CSS](docs/images/csscheck.png)
+- JSHINT  
+linter ![JSHINT](docs/images/jshintcheck.png)
 - HTML  
   ![HTML index.html](docs/images/index.htmlcheck.png)
   ![HTML 404.html](docs/images/404.htmlcheck.png)
