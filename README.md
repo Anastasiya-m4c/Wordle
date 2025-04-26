@@ -223,8 +223,8 @@ Validation completed vith no errors.
 
 - CSS    
 ![CSS](docs/images/csscheck.png)
-- JSHINT  
-linter ![JSHINT](docs/images/jshintcheck.png)
+- JS HINT  
+![JSHINT](docs/images/jshintcheck.png)
 - HTML  
   ![HTML index.html](docs/images/index.htmlcheck.png)
   ![HTML 404.html](docs/images/404.htmlcheck.png)
