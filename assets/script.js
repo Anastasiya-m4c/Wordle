@@ -1,15 +1,21 @@
 const dailyWords = [
-    "APPLE", "BRAIN", "BRAVE", "BEACH", "CANDY",
-    "CHAIR", "CLOUD", "DANCE", "DOUBT", "DREAM",
-    "EAGLE", "EARTH", "ENJOY", "FLAME", "FLUTE",
-    "GHOST", "GLOVE", "GRAPE", "AGILE", "HAPPY",
-    "HOUSE", "IRONY", "JOKER", "KNIFE", "LEMON",
-    "LIGHT", "LUNCH", "MAGIC", "NIGHT", "NURSE",
-    "OCEAN", "PEACE", "PIANO", "PIZZA", "PLANT",
-    "QUILT", "RIVER", "SMILE", "STONE", "TABLE",
-    "TIGER", "TRIBE", "ULTRA", "VOCAL", "VOICE",
-    "WATCH", "WATER", "TRAIN", "YOUTH", "ZEBRA"
-];
+        "APPLE", "BRAIN", "BRAVE", "BEACH", "CANDY", "CHAIR", "CLOUD", "DANCE", "DOUBT", "DREAM",
+        "EAGLE", "EARTH", "ENJOY", "FLAME", "FLUTE", "GHOST", "GLOVE", "GRAPE", "AGILE", "HAPPY",
+        "HOUSE", "IRONY", "JOKER", "KNIFE", "LEMON", "LIGHT", "LUNCH", "MAGIC", "NIGHT", "NURSE",
+        "OCEAN", "PEACE", "PIANO", "PIZZA", "PLANT", "QUILT", "RIVER", "SMILE", "STONE", "TABLE",
+        "TIGER", "TRIBE", "ULTRA", "VOCAL", "VOICE", "WATCH", "WATER", "TRAIN", "YOUTH", "ZEBRA",
+        "DRINK", "STRAW", "COAST", "CRANE", "MOIST", "ABOUT", "ABOVE", "ACTOR", "ACUTE", "ADMIT",
+        "ADOPT", "AFTER", "AGAIN", "AGENT", "ANGER", "BAKER", "BASIC", "BATHS", "BEGIN", "BEING",
+        "BELOW", "BENCH", "BESTS", "BIRTH", "CABIN", "CAMEL", "CANOE", "CAPES", "CARRY", "CASES",
+        "CATCH", "CAUSE", "CELLS", "CHAIN", "DAILY", "DATED", "DEALT", "DEATH", "DEBIT", "DELAY",
+        "DELTA", "DEPTH", "DESKS", "EAGER", "EARLY", "EARNS", "EIGHT", "ENTRY", "EQUAL", "ERROR",
+        "ESSAY", "EVENT", "EVERY", "FAILS", "FAINT", "FALSE", "FANCY", "FARMS", "FATAL", "FAULT",
+        "FENCE", "FEWER", "FIELD", "GAMES", "GARDY", "GAUZE", "GIVEN", "GLORY", "GOALS", "GOATS",
+        "GRACE", "GRADE", "HABIT", "HARSH", "HASTY", "HATCH", "HEARD", "HEART", "HEAVY", "HELLO",
+        "HELPS", "IDEAL", "IMAGE", "INDEX", "INNER", "INPUT", "ITEMS", "IVORY", "JOINS", "JUDGE",
+        "JUICE", "JUMPY", "JUROR", "LABEL", "LARGE", "LASER", "LATER", "LAUGH", "LAYER", "LEARN",
+        "LEAST", "LEAVE", "LEGAL"
+    ];
 
 // Set date-based indexing to pick the daily word - code sugested by AI
 const today = new Date();
