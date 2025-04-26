@@ -1,0 +1,117 @@
+60ae1dac939f6cda15cc175dde45a85f4d06ea5d - annie-mac - Sat Apr 26 15:40:21 2025 +0100 - update readme
+668869a1bfc01e7d0c19b14933a1117fdb895c17 - annie-mac - Sat Apr 26 15:20:15 2025 +0100 - remove js tags from 404 as not needed
+7c48b314897f9afa816f5b611d44c861a9c30bdc - annie-mac - Sat Apr 26 14:57:48 2025 +0100 - expand daily word array
+bc611df9b8aa30ce9a1c05e5e56b38ad854e9a06 - annie-mac - Sat Apr 26 14:46:32 2025 +0100 - code tidy up
+a4d3ba519172a1b6feedae3cc5f1b69431e4b14e - annie-mac - Sat Apr 26 13:57:57 2025 +0100 - update readme
+03c52cea7392dd4e404de56207d3b30d5881d0a4 - annie-mac - Sat Apr 26 13:52:59 2025 +0100 - update readme
+7bac5f5f3ba7a879fdd6ce984e2208f3e9b37510 - annie-mac - Sat Apr 26 13:51:11 2025 +0100 - update readme
+32962fb95caa1864d05bd6c76bf8dd1e06346ae8 - annie-mac - Sat Apr 26 13:42:36 2025 +0100 - update readme
+548749deb289b82bab2da651380b09a94eb15b25 - annie-mac - Sat Apr 26 13:19:35 2025 +0100 - update readme
+8f937c4e4b2b5e545686a4be9778758fecf75a28 - annie-mac - Sat Apr 26 09:36:09 2025 +0100 - code tidy up
+7e62f5760c391d2e83865c9814fb8a386c924a7a - annie-mac - Sat Apr 26 09:18:13 2025 +0100 - code tidy up
+83d8f7776d80015ba17076cf93d328ed40c520d9 - annie-mac - Sat Apr 26 09:08:31 2025 +0100 - ammend wording & game play to make it explisit that this is a daily game
+39b4911f92fffcf142e30aabce5604cbf269dd20 - annie-mac - Wed Apr 23 18:42:42 2025 +0100 - change btn text
+397b979290f9ef653d96916163f750a9904c1194 - annie-mac - Wed Apr 23 18:39:29 2025 +0100 - add code to initialise function set focus on the first tile when the page loads
+b5df7110bf63a1a05180a884dc265f3153c702e9 - annie-mac - Wed Apr 23 18:34:56 2025 +0100 - apply a fix to change 404 btn primary colout by targeting active class
+4a8060115b6390de0d2c2baedb891f5fad8abba7 - annie-mac - Wed Apr 23 18:22:20 2025 +0100 - revert chage and create new css for primary btn
+ef7c26b1efcac07e656f071c129cae2d6f779e8b - annie-mac - Wed Apr 23 18:14:11 2025 +0100 - ad btn id to fix the btn colout override by bootstrap
+d6c51610c759894862d18e5ec3146cb0c224e5f2 - annie-mac - Wed Apr 23 18:08:37 2025 +0100 - tidy up 404 page
+de6c73e1c25357f5b82f628ae5ca60dd35d427f9 - annie-mac - Wed Apr 23 18:01:31 2025 +0100 - fix href path
+29d6895101953dee0fa45e606ff1289eb2d149e6 - annie-mac - Wed Apr 23 17:28:27 2025 +0100 - apply the fix for modal fading issue by disabling the event listener when the modal is open
+5e2d3b68dea855c767300c161f54088e7e88a165 - annie-mac - Wed Apr 23 16:44:22 2025 +0100 - apply a fix where this only includes letter and tabbing is not prevented so no accesibility issues are caused
+3b21787419d1cad42707eec8035ea602ac46b92e - annie-mac - Wed Apr 23 16:16:39 2025 +0100 - fix the input issue by prevent manual typing, used chat gpt to troubleshoot
+7176aea511c35fe02cb702e64b6a3c03165851e1 - annie-mac - Wed Apr 23 11:44:29 2025 +0100 - update readme
+bcf345e853160fbf1a1c57e55b812fb0332d73c1 - annie-mac - Wed Apr 23 11:43:00 2025 +0100 - add to readme file
+24d7da2852f5cbac78e335bc4c80f8e1c5e221b8 - annie-mac - Wed Apr 23 11:11:24 2025 +0100 - ammend instructions
+b652fc341080f12f23ca55cefc3add8c160a3065 - annie-mac - Wed Apr 23 11:07:03 2025 +0100 - add font awesome and game rules
+d8c9e283991074c89aed864fd9750464e0f8ebce - annie-mac - Thu Apr 17 14:00:04 2025 +0100 - code run through a beautifyer
+8dee1b09a55d5f408b01f725bf1a078b7d56928c - annie-mac - Wed Apr 16 22:24:41 2025 +0100 - revert a change to remove the let for rows and colums as it breaks the game
+e9548b55ea50fd9652cb844e9e05a973156ede42 - annie-mac - Wed Apr 16 21:53:04 2025 +0100 - fix based on feedback validator backround colour set to none
+d39c5c30cd3d509f0429bf6db828a92e99c2d0fa - annie-mac - Wed Apr 16 21:47:23 2025 +0100 - make further improvements based on lint validator feedback
+747f94faa5c1d33b5a2d40446d5f5408b4663fc0 - annie-mac - Wed Apr 16 20:51:35 2025 +0100 - add readmee file
+95efd26d00e341d1ad75957e9c0f00c12b841102 - annie-mac - Wed Apr 16 20:09:18 2025 +0100 - fix unidentified error by chnging na array to uppercase words
+1d83a487d993a2e3290d3a588a8ebb8eb5907fe7 - annie-mac - Wed Apr 16 19:54:40 2025 +0100 - make secret word change daily
+d82bdb689af1d82a794be15479364ed27273b125 - annie-mac - Wed Apr 16 19:26:00 2025 +0100 - change modal stying to match the rest of the game
+b32efcafc58d1f365af26bc1bfc7de25ab0a22d5 - annie-mac - Wed Apr 16 19:11:09 2025 +0100 - update grid colours
+9bebaecdd1c411240e1352b17095f01875d8dea6 - annie-mac - Wed Apr 16 19:05:25 2025 +0100 - change colout paletter
+2f7d28a0d06e53ae2559b58be6bfa0fc4f923a5b - annie-mac - Wed Apr 16 18:55:41 2025 +0100 - fix acessibility labels
+7c3a8482bb4a91274c0c569ab0ad5aa55b483c58 - annie-mac - Wed Apr 16 18:38:04 2025 +0100 - fix acessibility issue - add aria labes to tiles
+cca2741c02366897e02de277cc317b3faf9472d0 - annie-mac - Mon Apr 14 22:10:53 2025 +0100 - update htm text
+47b1106ec2853c4f9f92bc4c060bde661cb7f163 - annie-mac - Mon Apr 14 21:52:23 2025 +0100 - change order in the on submit function to check for guesses left last
+1ca655b3078c4df3010e202b29d300e9f8042f7b - annie-mac - Mon Apr 14 21:40:58 2025 +0100 - add js bootstrap link
+ae6c13ac66aab5739eadd84d6e5f7413bc8026af - annie-mac - Mon Apr 14 21:22:38 2025 +0100 - replace alerts with boostrap modal & remove duplicate no more guesses if statment
+012d79064d2be703c72bd1c2a24d808f12c395c3 - annie-mac - Mon Apr 14 21:16:13 2025 +0100 - add bootstrap modal & js function to enable the modal
+7078f95385363d0906d82c43cb27b2e0a209b51b - annie-mac - Mon Apr 14 20:56:16 2025 +0100 - add an array of massages to be randomly chosen when the word is guessed
+08348a79e0eae2a3178a490ea6b8ad4a64bc8924 - annie-mac - Mon Apr 14 20:28:57 2025 +0100 - change word of the day
+b54670e69fe569039a41c2bb2d53f696366859fe - annie-mac - Mon Apr 14 20:26:28 2025 +0100 - disable submit button if no guesses left
+bf0fb0795e3fd215beb104077190041fc4b743d4 - annie-mac - Mon Apr 14 20:18:02 2025 +0100 - appy fix to enable next row once submit function has run
+649794073a7c1cb80c09a6f815b44a34c09626a8 - annie-mac - Mon Apr 14 20:10:47 2025 +0100 - minor cosmetic chnges in the code
+d2f70a780afcf44cf8190621f94450705e50420a - annie-mac - Mon Apr 14 19:46:07 2025 +0100 - apply fix to the for loop to diable previous rows after a guess is made
+79e6afd00ec406a79d268ffe38206530b4aa9dc3 - annie-mac - Mon Apr 14 19:37:48 2025 +0100 - disable rows at intialise and add function to enable current row for typing
+ed1b16fc266331fbadf48cb53d58da894d1eec88 - annie-mac - Mon Apr 14 17:04:03 2025 +0100 - disable submitt button after game has been won and when there is no more guesses left
+639c57f9d16c0a86ddcdac3ac5f877abc8930b12 - annie-mac - Mon Apr 14 16:48:14 2025 +0100 - remove unwanted code and console logs. Apply fix for correct guess is not being highligted
+84b43fcbc4ee0bab4887ffbf214e3505d2a180e6 - annie-mac - Mon Apr 14 16:12:46 2025 +0100 - add bootstrap class to btn
+eb42b2f69bec13c3396ca95637389ad010da75f4 - annie-mac - Mon Apr 14 16:08:35 2025 +0100 - create af unction to disable submit btn on gameover
+67c1b4c8a091d98bae5a7cb3d0dd2e46bc420b77 - annie-mac - Mon Apr 14 15:56:26 2025 +0100 - apply fix for adding missing return statments
+11eb93f4cb8046d76f23fd5740eed5558456a467 - annie-mac - Mon Apr 14 15:47:18 2025 +0100 - change priority in submit function and add aditional comments to the input rules and supporting functions
+3b476e2932adc96364ae76dda259d85e5d0336f2 - annie-mac - Mon Apr 14 15:37:51 2025 +0100 - change r & c ref to appropriate col and row
+e417c93cccde07e7a06821e0f02cd1203f47b0d5 - annie-mac - Sun Apr 13 23:00:03 2025 +0100 - add tile focus on input
+68942ae29832550aac5c35011195834c7d626317 - annie-mac - Sun Apr 13 22:56:56 2025 +0100 - add game over vat to stop any further actions once game has been won
+a51a77189731c547adcb877334397dc195c322a2 - annie-mac - Sun Apr 13 22:46:11 2025 +0100 - fix bug for the uneditable first row
+d05ce4fedf4f1596e012aa1d08377a8c47a5b984 - annie-mac - Sun Apr 13 22:39:37 2025 +0100 - add a for loot to stop player form ediditng previous guesses
+47172d2258a4d10e9acde5335fef98104d921f1d - annie-mac - Sun Apr 13 22:35:33 2025 +0100 - check guesses left before submit
+fc3d371a86da5175d04c2d19a67fcf9b74257109 - annie-mac - Sun Apr 13 22:24:46 2025 +0100 - change condition for guesses left to be less than instea dof equal
+5dc9ab269872164253de4f0b24684339f225b980 - annie-mac - Sun Apr 13 22:22:10 2025 +0100 - change event listener from Jquery to vanila JS
+0276fbda410730ef93554bc3b5dc1e879b212e03 - annie-mac - Sun Apr 13 21:50:53 2025 +0100 - fix the loop to check guesses based on the current guess row
+b3d6bbc92a64c0157b246333a2a2b8d0bc4b97a1 - annie-mac - Sun Apr 13 20:44:48 2025 +0100 - rename js file to script & update file pass in html
+2b3c356a4bd7c9c8849de8bdf7c3b3798c504ee5 - annie-mac - Sun Apr 13 20:43:15 2025 +0100 - give submit function parameters that are more strict and apply line by line
+2c8eae085c98f1c0355301a378a5422b8c83d95a - annie-mac - Sun Apr 13 08:38:58 2025 +0100 - add code to make on sumbit work across multiple lines
+b91dec0238e1ce9d8fea2d45603c619be7a311ed - annie-mac - Tue Apr 8 21:43:36 2025 +0100 - change card colours to more brighter version
+9c3bb743fe248252af56e87ac6cd2e946052b580 - annie-mac - Tue Apr 8 21:26:40 2025 +0100 - add error handling to API and change submit function to async
+8ed8024229e45188a0a9cac5c6702ded3969f08e - annie-mac - Tue Apr 8 20:53:56 2025 +0100 - correct more typos and add letter parameter to the add letter function
+b0d4a1b89711f8f9686f81eee36835b598a941d7 - annie-mac - Tue Apr 8 20:46:48 2025 +0100 - correct typos in on submit function
+793178a2ecca565bfc8356312071a9751d8aa3c3 - annie-mac - Tue Apr 8 20:39:36 2025 +0100 - review code and correct typos
+eb1cb43fd142f466a074c2e14bd223937cb021a9 - annie-mac - Tue Apr 8 20:33:57 2025 +0100 - add valid word check & function usint api
+29c77ee697a95ab5630edd89de10d7399044d9eb - annie-mac - Tue Apr 8 20:20:48 2025 +0100 - call on the input rules during initialise
+10010b87830d75e7fda67c14d54c86e60a56da20 - annie-mac - Tue Apr 8 20:19:51 2025 +0100 - fix typos in remove letter function
+98ca7f2630744f7eb82f043d6b8e73f2a9667bda - annie-mac - Tue Apr 8 20:14:21 2025 +0100 - fix typo in console.log commit statment
+3ca109585c9fd9955cbf3d888a9fd95e1af9d498 - annie-mac - Tue Apr 8 20:10:57 2025 +0100 - add if else statments to on submit function
+8ac71afab09f9c38636306e5d6d12b68512691f7 - annie-mac - Sat Apr 5 10:09:53 2025 +0100 - fix typo inthe input rule and is letter functions
+e179720a8555d10a403bcd2b3ff9e7399bcc6e2d - annie-mac - Sat Apr 5 10:04:52 2025 +0100 - fix typo in input rules
+2c795821db795c40735030cde612d5b06dff599a - annie-mac - Sat Apr 5 10:00:06 2025 +0100 - define add letter and is letter function
+4aa8c15306cc86dfe3ad9b6b63893bd13ba0221b - annie-mac - Sat Apr 5 09:56:25 2025 +0100 - defile remove letter function
+54c98cecfb3e037579e751fa4af05c4af2b6b403 - annie-mac - Sat Apr 5 09:54:31 2025 +0100 - define input rules function
+4b801b796fe70f6eb2f8ad7e3914b242f3ef27d7 - annie-mac - Sat Apr 5 09:51:25 2025 +0100 - add more varuables to define game sequence, add return function sceleton
+e230e3aa6a854ccaca6cca269b8b2909a4e860b0 - annie-mac - Fri Apr 4 18:19:58 2025 +0100 - remove input and related functions
+b1bd0986b6f310716734e199e2d6faf229180182 - annie-mac - Fri Apr 4 18:17:58 2025 +0100 - define letter functions
+efbb7616287c3412cd5ec23863fa8eb7484a89b4 - annie-mac - Fri Apr 4 18:06:28 2025 +0100 - add function structure for the navigation keys
+de94da1e8503c7fa06bbe25279f94e15263d392f - annie-mac - Fri Apr 4 17:13:42 2025 +0100 - add var for rows and input rules function sceleton
+f6d71b55628cb502c6f67992e82e79c1cb68bcce - annie-mac - Fri Apr 4 17:12:27 2025 +0100 - apply fix to the highlight fuction defining tile correctly
+0ced3f85e70e15887e8cfa765cd32ec272f47d46 - annie-mac - Fri Apr 4 15:48:05 2025 +0100 - add ccs tiles styling for new colours
+529bb1d6ebb754c2b05eab6d62fdb33659b03c04 - annie-mac - Fri Apr 4 15:32:58 2025 +0100 - add highlight function to highlight inputted letters based weather they are correct, contained or incorrect
+38da156c1b810493226bf20916318db05e6923cb - annie-mac - Fri Apr 4 14:13:11 2025 +0100 - remove with if statment and add console lot to test the imput word works
+3d30d8591068d38900f05be4ed14cf2c187949e1 - annie-mac - Tue Apr 1 21:18:54 2025 +0100 - add favicon & meta discription
+f0564aa6b0a4e84092f65bd252a47db318712f5c - annie-mac - Tue Apr 1 20:51:39 2025 +0100 - ammend border colout on the tile
+6db088ba13f283598c15ea6f0d225c97469e6dfd - annie-mac - Tue Apr 1 20:50:48 2025 +0100 - add styles & colours in the style.css file
+80565caa29ba9039b5dc69984bdb28cc1845eb2f - annie-mac - Tue Apr 1 20:35:12 2025 +0100 - link jquery in html file
+b55ada58c05f6df87c0fc39e005405f0a71c4722 - annie-mac - Tue Apr 1 20:05:10 2025 +0100 - bug fix for usser input alert, less then sign incorrect
+15d0039dfc0bc32ddb17ceeb495d955897070a30 - annie-mac - Tue Apr 1 20:03:42 2025 +0100 - bug fix for the event listner function ) in the wrong place
+e9bfe447cb24c61d0b4c4c8454b5c2a55e2af670 - annie-mac - Tue Apr 1 19:42:13 2025 +0100 - event listner bug fix, missinng "" & ()
+db66b9b4c2b5c32708ef920f149ae6ea0dd053bf - annie-mac - Tue Apr 1 19:30:47 2025 +0100 - add loop function to collect values from each tile
+e3fe41c879d290e98823f70c36d59afb17720b3a - annie-mac - Tue Apr 1 17:26:35 2025 +0100 - add submit id and click event listner
+4a3a9dd900533f1a0500e2a22d1240ce70939074 - annie-mac - Tue Apr 1 16:40:40 2025 +0100 - change background colour
+36a07bbfb0420ce7154ccff1d9a10c23b5bd412a - annie-mac - Tue Apr 1 16:35:33 2025 +0100 - correct tile* typo in js file
+a90378230d1ded9b89dbe205628d30ec8a4d7294 - annie-mac - Tue Apr 1 16:29:58 2025 +0100 - Update style.css
+a644401b0206da97689067f68e7417a0e7b7403d - annie-mac - Tue Apr 1 16:19:53 2025 +0100 - change span to text in JS to allow for text input
+c86dd5b0acf5abebabfe260713a5eb9d9bb62ecd - annie-mac - Mon Mar 31 16:32:59 2025 +0100 - call initialise function to load when the page has loaded
+62f8210617ca223fa48fcbca418b9afe823c37eb - annie-mac - Mon Mar 31 16:29:04 2025 +0100 - change size of the grid so the tiles fit within it
+745b3cf22423eaa5091e72c76428ae7fd0b7bac4 - annie-mac - Mon Mar 31 16:16:05 2025 +0100 - add grid styling
+658e4ebfe22951192cc18654ed8b17a2d41c93a2 - annie-mac - Mon Mar 31 15:28:26 2025 +0100 - remove duplicate emmet initial doc creation html
+394846dc18b315d61cae022a3efa0d9d26036493 - annie-mac - Mon Mar 31 15:25:43 2025 +0100 - bug fix change initialise to function instead of a var
+d73e0683dcbd2beb97a374ed5061471a4a3d5754 - annie-mac - Mon Mar 31 15:23:05 2025 +0100 - meta link bug fix, serch eng disc addet to the worng place
+2d9eb7a1f95887e54980fc89f9a7ffebf5060a2d - annie-mac - Mon Mar 31 15:19:20 2025 +0100 - add tile styling in css sheet
+d99dab925ed6d0c8ae2fadae858220a926dfd610 - annie-mac - Mon Mar 31 15:13:30 2025 +0100 - create a grid loop function and append to the DOM
+b14810069e97c297ff4275c90df570f779d39242 - annie-mac - Mon Mar 31 13:25:15 2025 +0100 - add div with id grid
+a1dca50274fa75d5988ce54694e717d869f05a5f - annie-mac - Mon Mar 31 13:10:03 2025 +0100 - link js stylesheet
+43b8c5e6601d4d521b3910b6499a484ef8c0e618 - annie-mac - Fri Mar 28 17:28:07 2025 +0000 - create file structure
+1d39679eb9b8382d910a78b9fc80d3bb103e218e - annie-mac - Fri Mar 28 17:19:23 2025 +0000 - Initial commit
