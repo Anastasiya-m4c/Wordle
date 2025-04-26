@@ -106,6 +106,7 @@ This game is designed to be simple, clean, and distraction-free, featuring a 5x6
 ![Wiferfames for WEB browsers](docs/images/web_wireframe.png)
 
 Final MVP version:  
+
 ![Gameplay](docs/images/gameplay.png)  
 ![Not a valid word messaging](docs/images/invalidword.png)  
 ![Word is less than 5 letters](docs/images/lessthan5.png)
