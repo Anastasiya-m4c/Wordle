@@ -153,11 +153,23 @@ Automatically highlights the correct word or end-of-game result.
 - Voiceover - for acesibility testing. 
 - axe DevTools - for any accessibility related issues.
 
-## Testing
-The site has been tested fully by viewing pages and clicking the links manually in a number of different browsers as well as with a use of assisted tools like dev tools and lighthouse, code checker, wave plug in.
+## Testing  
+Throughout the development of this project, I have conducted several rounds of testing to ensure a smooth user experience, robust functionality, and adherence to web standards. The testing covered browser compatibility, accessibility, functionality, real device testing, and UI/UX design which was achieved through a combination of manual testing and use of code validators, tools like Lighthouse & plugins and validators.
+
+*Manual Testing:* The core features of the game, including word validation, guess input, feedback messages, and modal functionality, have been manually tested to ensure they work as expected. This includes testing edge cases like submitting invalid words, guessing beyond the allowed attempts, and ensuring that the feedback (e.g., color-coded squares) accurately reflects the game state.
+
+*Error Handling:* I tested the app to make sure that errors (e.g., network issues, invalid input) are gracefully handled. If the game fails to fetch a word or encounters an unexpected issue, it displays a clear error message to the user.  
+
+*User Feedback:* After completing the MVP, I asked friends and family to test the game and provide feedback. This feedback was invaluable in fine-tuning the user experience and has been converting into user stories for future development.   
 
 ### Google's Lighthouse Performance
-lighthouse performance has been tested on a chromebook and varies much depending on the device tested on and internet speed. Overall performance passed with no failures and showing green results especially on web some mobile results are in high amber, images have been converted to webp, optimised and resized to minimise any performance issues. Some future adjustments can be made but are outside the scope of this project and are mostly due to the imported code like bootstrap and google fonts.  
+WEB brouser
+ ![index.html](docs/images/main_lighthouse_web.png)
+ ![404.html](docs/images/404_lighthouse_web.png)
+
+Mobile
+ ![index.html](docs/images/main_lighthouse_mobile.png)
+ ![404.html](docs/images/404_lighthouse_mob.png)
 
 Results:
 
