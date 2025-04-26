@@ -1,9 +1,8 @@
-// Array of daily words
 const dailyWords = [
     "APPLE", "BRAIN", "BRAVE", "BEACH", "CANDY",
     "CHAIR", "CLOUD", "DANCE", "DOUBT", "DREAM",
     "EAGLE", "EARTH", "ENJOY", "FLAME", "FLUTE",
-    "GHOST", "GLOVE", "GRAPE", "GUITAR", "HAPPY",
+    "GHOST", "GLOVE", "GRAPE", "AGILE", "HAPPY",
     "HOUSE", "IRONY", "JOKER", "KNIFE", "LEMON",
     "LIGHT", "LUNCH", "MAGIC", "NIGHT", "NURSE",
     "OCEAN", "PEACE", "PIANO", "PIZZA", "PLANT",
@@ -29,7 +28,6 @@ let col = 0;
 
 let gameOver = false;
 let guessLeft = height;
-
 
 // Runs when the window has finished loading
 window.onload = function() {
@@ -78,7 +76,7 @@ function setRowActive(rowIndex) {
 // Event listener for the submit button click
 document.getElementById('submitBtn').addEventListener('click', function() {
     if (!gameOver) {
-        onSubmit()
+        onSubmit();
     }
 });
 
@@ -88,10 +86,9 @@ async function onSubmit() {
     const modal = document.getElementById('gameModal');
     const modalVisible = modal.classList.contains('show');
     if (modalVisible) return; // Don't run onSubmit if modal is open
-
     let tiles = document.querySelectorAll('.tile'); // Get all tiles
     let userInput = ''; // String to hold the user's guess
-    for (i = 0; i < width; i++) { // Loop to collect the user's guess from the tiles
+    for (let i = 0; i < width; i++) { // Loop to collect the user's guess from the tiles
         userInput += tiles[row * width + i].value.toUpperCase(); // Access each tile of the current row
     }
     if (userInput.length < width) { // Check for length
@@ -111,8 +108,8 @@ async function onSubmit() {
         } else {
             highlight(userInput); // Highlight tiles based on guess vs secret word
             //for loop provided by chat gpt to disable all previous rows after the guess is made    
-            for (r = 0; r < row; r++) {
-                for (c = 0; c < width; c++) {
+            for (let r = 0; r < row; r++) {
+                for (let c = 0; c < width; c++) {
                     tiles[r * width + c].disabled = true;
                 }
             }
@@ -138,7 +135,7 @@ async function isValidWord(word) {
             return true;
         } else {
             if (response.status === 404) {
-                console.log('User entered invalid word')
+                console.log('User entered invalid word');
                 return false;
                 } else {
                     return false; 
@@ -153,7 +150,7 @@ async function isValidWord(word) {
 // Function to highlight the tiles based on the user's guess
 function highlight(userInput) {
     let tiles = document.querySelectorAll('.tile');
-    for (i = 0; i < width; i++) {
+    for (let i = 0; i < width; i++) {
         let tile = tiles[row * width + i];
         if (userInput[i] === secretWord[i]) {
             tile.classList.add('green');
@@ -179,7 +176,7 @@ function inputRules() {
         } else if (isLetter(key)) {
             addLetter(key);
         }
-    }
+    };
 }
 
 // function to remove letter 
@@ -215,7 +212,7 @@ function disableBtn() {
     if (gameOver) {
         let btn = document.getElementById('submitBtn');
         btn.classList.add('disabled');
-        btn.innerText = "Come back tomorrow for another go 🤓"
+        btn.innerText = "Come back tomorrow for another go 🤓";
     }
 }
 
@@ -256,4 +253,3 @@ const outOfGuessesMessages = [
     (word) => `That’s all 6. The word was "${word}". Consider yourself alphabetically humbled.`,
     (word) => `Out of guesses! The word was "${word}". Somewhere, a dictionary just sighed.`,
 ];
-
