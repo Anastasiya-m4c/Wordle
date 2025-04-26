@@ -1,23 +1,23 @@
 // Array of daily words
 const dailyWords = [
-    "APPLE", "GRAPE", "TABLE", "STONE", "FLAME",
-    "WATER", "PLANT", "SMILE", "DANCE", "WATCH",
-    "CLOUD", "DREAM", "CHAIR", "LUNCH", "LIGHT",
-    "HAPPY", "BEACH", "TIGER", "PIZZA", "VOCAL",
-    "GUITAR", "FLUTE", "NIGHT", "RIVER", "EARTH",
-    "PIANO", "MAGIC", "GLOVE", "PEACE", "GHOST"
+    "APPLE", "BRAIN", "BRAVE", "BEACH", "CANDY",
+    "CHAIR", "CLOUD", "DANCE", "DOUBT", "DREAM",
+    "EAGLE", "EARTH", "ENJOY", "FLAME", "FLUTE",
+    "GHOST", "GLOVE", "GRAPE", "GUITAR", "HAPPY",
+    "HOUSE", "IRONY", "JOKER", "KNIFE", "LEMON",
+    "LIGHT", "LUNCH", "MAGIC", "NIGHT", "NURSE",
+    "OCEAN", "PEACE", "PIANO", "PIZZA", "PLANT",
+    "QUILT", "RIVER", "SMILE", "STONE", "TABLE",
+    "TIGER", "TRIBE", "ULTRA", "VOCAL", "VOICE",
+    "WATCH", "WATER", "TRAIN", "YOUTH", "ZEBRA"
 ];
 
-//Code used from chat GPT to change word daily.
-// Use date-based indexing to pick the daily word
+//Use date-based indexing to pick the daily word - code sugested by AI
 const today = new Date();
 const startDate = new Date(today.getFullYear(), 0, 0); // Jan 1 of the current year
 const diffInTime = today - startDate; // Difference in milliseconds
 const diffInDays = Math.floor(diffInTime / (1000 * 3600 * 24)); // Convert to days
 const secretWord = dailyWords[diffInDays % dailyWords.length]; // Pick word based on the day
-
-//console.log(secretWord); // This will log today's word
-
 
 // Dimensions of the grid for the game
 let height = 6; // Number of rows
@@ -218,6 +218,7 @@ function disableBtn() {
     if (gameOver) {
         let btn = document.getElementById('submitBtn');
         btn.classList.add('disabled');
+        btn.innerText = "Come back tomorrow for another go"
     }
 }
 
