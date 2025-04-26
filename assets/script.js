@@ -12,7 +12,7 @@ const dailyWords = [
     "WATCH", "WATER", "TRAIN", "YOUTH", "ZEBRA"
 ];
 
-//Use date-based indexing to pick the daily word - code sugested by AI
+// Set date-based indexing to pick the daily word - code sugested by AI
 const today = new Date();
 const startDate = new Date(today.getFullYear(), 0, 0); // Jan 1 of the current year
 const diffInTime = today - startDate; // Difference in milliseconds
@@ -49,7 +49,7 @@ function initialise() {
             tile.id = `tile${row}${col}`;
             tile.disabled = true;
             tile.setAttribute('aria-label', 'letter input tile');
-            //Code sugested by chat gpt to fix input issue. 
+            // Event listner suggested by ChatGPT to fix duplicate letter input when user enters letters out of sequence
             tile.addEventListener('keydown', (e) => {
                 if (e.key.length === 1) {
                     e.preventDefault(); // Block letter/number typing only
@@ -59,7 +59,6 @@ function initialise() {
         }
     }
     setRowActive(row);
-    //code from Marco to focus on the first tile when page loads
     document.getElementById(`tile0${col}`)?.focus();
 }
 
@@ -85,7 +84,6 @@ document.getElementById('submitBtn').addEventListener('click', function() {
 
 // Function to handle a guess submit
 async function onSubmit() {
-
     // Check if the modal is currently open
     const modal = document.getElementById('gameModal');
     const modalVisible = modal.classList.contains('show');
@@ -122,7 +120,6 @@ async function onSubmit() {
             col = 0;
             guessLeft--; // Decrease guesses left
             setRowActive(row);
-            console.log(guessLeft); // Log remaining guesses
         }
         if (guessLeft <= 0) {
             showBootstrapModal(getRandomOutOfGuessesMessage(secretWord));
