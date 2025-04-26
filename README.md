@@ -67,46 +67,41 @@ I want to receive in the moment feedback when the word is not valid or not long 
 
 ### Future developments
 **On-Screen Keyboard Integration**  
-**Objective:**  
+*Objective:*  
 - Enhance accessibility and user experience by providing an interactive on-screen keyboard.  
-
-**User Story:**  
+*User Story:*  
 - As a player, I want access to an on-screen keyboard that reflects the current state of the game (e.g., used, correct, incorrect letters), so that I can more easily input guesses—especially on mobile or touch-screen devices.  
 
 **Welcome Modal & Onboarding Experience**  
-**Objective:**  
+*Objective:*  
 - Introduce new players to the game with a brief, intuitive onboarding flow that outlines the basic rules and mechanics.  
-
-**User Story:**  
+*User Story:*  
 - As a first-time player, I want to see a welcome modal with a brief explanation of the game, so that I can understand how to play and feel confident before making my first guess.  
 
 **Engaging features**   
-**Objective:**   
+*Objective:*   
 - Introduced a timer that starts when users enters 1st guess.   
-
-**User Story:**   
+*User Story:*   
 - I want to see a how long it takes me to guess the daily word so that i can try and beat my score from the previous day.   
 
 **Dictionary API**   
-**Objective:**  
+*Objective:*  
 - Expand the array of daily words, so that user can keep on playing.  
-
-**User Story:**  
+*User Story:*  
 - As a player, I want to keep returning to play the game with little change that secret word will repeat.    
 
 **AAA WCAG Accessibility Standards**   
-**Objective:**  
+*Objective:*   
 - Address any outstanding accessibility warnings to achieve AAA standard.  
-
-**User Story:**  
+*User Story:*  
 - I want this game to be fully accessible with best practices followed so that it's fully compatible with assistive technologies. 
 
 ### Wireframes  
 This game is designed to be simple, clean, and distraction-free, featuring a 5x6 grid and straightforward messaging so players can focus purely on the challenge of winning. Friendly, real-time modal feedback helps guide the experience, while the letter highlighting system supports strategic thinking—making it easy for players to plan their next move with confidence.
 
-docs/images/mobile_wireframe.png
-docs/images/tablet_wireframe.png
-![Wiferfames for WEB browsers](docs/images/web_wireframe.png)
+![Wiferfames for WEB browsers](docs/images/mobile_wireframe.png)  
+![Wiferfames for WEB browsers](docs/images/tablet_wireframe.png)  
+![Wiferfames for WEB browsers](docs/images/web_wireframe.png)  
 
 ### Typography
 The font was intentionally selected to align with the visual style of the popular word game Wordle, so that it's instantly recognized and familiar to players. It’s also clean, ensuring there are no distractions for the thinkers.
