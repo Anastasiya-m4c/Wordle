@@ -35,7 +35,7 @@ View live website [HERE](https://anastasiya-m4c.github.io/Wordle/)
 ### User Stories  
 ### 1. User Story: Guess the word
 **As a user,**  
-As a player, I want to enter a five-letter word,
+I want to enter a five-letter word,
 **So that I can** 
 try to guess the daily puzzle.
 
@@ -66,15 +66,16 @@ I want to receive in the moment feedback when the word is not valid or not long 
 
 
 ### Future developments
-**On-Screen Keyboard Integration**
-**Objective:**
-- Enhance accessibility and user experience by providing an interactive on-screen keyboard.
-**User Story:**
-- As a player, I want access to an on-screen keyboard that reflects the current state of the game (e.g., used, correct, incorrect letters), so that I can more easily input guesses—especially on mobile or touch-screen devices.
+**On-Screen Keyboard Integration**. 
+**Objective:**. 
+- Enhance accessibility and user experience by providing an interactive on-screen keyboard.  
 
-**Welcome Modal & Onboarding Experience**
-**Objective:**
-- Introduce new players to the game with a brief, intuitive onboarding flow that outlines the basic rules and mechanics.
+**User Story:**. 
+- As a player, I want access to an on-screen keyboard that reflects the current state of the game (e.g., used, correct, incorrect letters), so that I can more easily input guesses—especially on mobile or touch-screen devices.  
+
+**Welcome Modal & Onboarding Experience**. 
+**Objective:**. 
+- Introduce new players to the game with a brief, intuitive onboarding flow that outlines the basic rules and mechanics.  
 
 **User Story:**
 - As a first-time player, I want to see a welcome modal with a brief explanation of the game, so that I can understand how to play and feel confident before making my first guess.
