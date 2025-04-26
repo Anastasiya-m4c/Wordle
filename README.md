@@ -182,9 +182,11 @@ This is tested on a combination of real life devices and well as responsive view
 
 ### Code Validation
 Validation completed vith no errors.  
-CCS 
-JS linter 
-HTML
+- CSS ![CSS](docs/images/csscheck.png)
+- JSHINT linter ![JSHINT](docs/images/jshintcheck.png)
+- HTML 
+![HTML index.html](docs/images/index.htmlcheck.png)
+![HTML 404.html](docs/images/404.htmlcheck.png)
 
 ### Manual Testing user stories or/and features
 
